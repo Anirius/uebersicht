@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>ANIRIUS® 2-in-1 · Schneide-Finder</title>
+<meta name="description" content="Was schneidest du heute? Das ANIRIUS® 2-in-1 Besteckmesser zeigt dir die richtige Seite: feiner oder grober Wellenschliff an einer Klinge.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="finder.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="nav__logo" href="#top" aria-label="ANIRIUS"><img src="img/anirius-logo.svg" alt="ANIRIUS"></a>
+  <nav class="nav__links" aria-label="Seite">
+    <a href="#top">Finder</a>
+    <a href="#messer">Das Messer</a>
+    <a href="#kaufen">Set</a>
+    <a href="#fragen">Fragen</a>
+  </nav>
+  <a class="nav__cart" href="#kaufen" aria-label="Warenkorb"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg><span data-count>0</span></a>
+</header>
+
+<main id="top">
+
+  <!-- 1 · The finder: tap a food, the knife turns to the right edge -->
+  <section class="finder" aria-label="Schneide-Finder">
+    <div class="finder__head">
+      <p class="mono">ANIRIUS® 2-in-1 · Schneide-Finder</p>
+      <h1>Was schneidest<br>du heute?</h1>
+      <div class="finder__aside">
+        <p>Eine Klinge, zwei Wellenschliffe. Wähle aus, was auf dem Brett liegt. Das Messer dreht sich auf die richtige Seite.</p>
+        <a class="btn btn--sm" href="#kaufen">6er-Set · <span data-price>39,95 €</span></a>
+      </div>
+    </div>
+
+    <div class="finder__zone">
+      <div class="finder__word" data-side="grob" aria-hidden="true"><span>Fein</span><span>Grob</span></div>
+      <canvas class="finder__stage" aria-label="3D-Messer. Ziehen zum Umdrehen."
+        data-model="../assets/anirius-knife.glb"
+        data-hdr="../assets/anirius-studio.hdr"></canvas>
+      <svg class="finder__edge" aria-hidden="true"><path pathLength="1"/></svg>
+      <p class="finder__tag mono" aria-hidden="true"></p>
+      <p class="finder__hint mono" aria-hidden="true"><span class="hint--mouse">Ziehen zum Umdrehen</span><span class="hint--touch">Wischen zum Umdrehen</span></p>
+    </div>
+
+    <div class="finder__foot">
+      <p class="finder__result" aria-live="polite"></p>
+      <div class="chips" role="group" aria-label="Was schneidest du?">
+        <button class="chip" data-food="baguette" aria-pressed="false"><i>01</i>Baguette</button>
+        <button class="chip" data-food="tomate" aria-pressed="false"><i>02</i>Tomate</button>
+        <button class="chip" data-food="steak" aria-pressed="false"><i>03</i>Steak</button>
+        <button class="chip" data-food="obst" aria-pressed="false"><i>04</i>Obst</button>
+        <button class="chip" data-food="pizza" aria-pressed="false"><i>05</i>Pizza</button>
+        <button class="chip" data-food="broetchen" aria-pressed="false"><i>06</i>Brötchen</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 · The knife in numbers -->
+  <section class="facts" id="messer">
+    <div class="sec-head rv">
+      <p class="mono">Das Messer</p>
+      <h2>Ein Messer.<br><span class="mute">Jede Mahlzeit.</span></h2>
+    </div>
+    <ul class="facts__grid">
+      <li class="rv"><b>2</b><span>Wellenschliffe an einer Klinge, fein oben, grob unten.</span></li>
+      <li class="rv"><b>420</b><span>Edelstahl, rostfrei und spülmaschinenfest.</span></li>
+      <li class="rv"><b>6</b><span>Besteckmesser pro Set, ca. 20 cm lang.</span></li>
+      <li class="rv"><b>4,4<small>★</small></b><span>von 5 Sternen bei 84 Bewertungen.</span></li>
+    </ul>
+  </section>
+
+  <!-- 3 · As seen on TV -->
+  <section class="tv">
+    <div class="tv__in rv">
+      <p class="mono">VOX · Die Höhle der Löwen · Staffel 19</p>
+      <p class="tv__quote">Vorgestellt vor den Löwen. <span class="mute">Jetzt bei dir am Tisch.</span></p>
+      <a class="link" href="https://anirius.de/" target="_blank" rel="noopener"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>Original-Ausschnitt ansehen</a>
+    </div>
+    <div class="ticker" aria-label="Bekannt aus: VOX, RTL+, Schwäbische Zeitung, deutsche-startups.de, LEADERSNET">
+      <div class="ticker__run" aria-hidden="true">
+        <span>VOX</span><span>RTL+</span><span>Schwäbische Zeitung</span><span>deutsche-startups.de</span><span>LEADERSNET</span>
+        <span>VOX</span><span>RTL+</span><span>Schwäbische Zeitung</span><span>deutsche-startups.de</span><span>LEADERSNET</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 · Buy -->
+  <section class="set" id="kaufen">
+    <div class="set__view">
+      <canvas class="set__stage" aria-hidden="true"></canvas>
+      <p class="set__cap mono" data-pack>1 Box · 6 Messer</p>
+    </div>
+    <div class="set__buy">
+      <p class="mono">In edler Geschenkbox</p>
+      <h2>Dein Set.</h2>
+      <p class="set__rating"><span class="stars" aria-hidden="true">★★★★★</span> 4,4 von 5 · 84 Bewertungen</p>
+      <form class="pick" data-buy>
+        <label class="opt">
+          <input type="radio" name="set" value="1" checked>
+          <span class="opt__in"><span class="opt__name">1 Box<small>6 Messer · Geschenkbox</small></span><b>39,95 €</b></span>
+        </label>
+        <label class="opt">
+          <input type="radio" name="set" value="2">
+          <span class="opt__in"><span class="opt__name">2 Boxen <em>Spare 15 €</em><small>12 Messer · 2 Geschenkboxen</small></span><b>64,90 €</b></span>
+        </label>
+        <button class="btn btn--wide" type="submit">In den Warenkorb · <span data-price>39,95 €</span></button>
+      </form>
+      <ul class="trust mono">
+        <li>Versand kostenlos in DE</li>
+        <li>DHL in 1–3 Werktagen</li>
+        <li>30 Tage Rückgaberecht</li>
+        <li>PayPal · Klarna · Karte</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 5 · FAQ -->
+  <section class="faq" id="fragen">
+    <div class="sec-head">
+      <p class="mono">Service</p>
+      <h2>Fragen.</h2>
+    </div>
+    <div class="faq__list">
+      <details><summary>Wie funktioniert das Messer?</summary><p>Das Messer hat eine feine und eine grobe Seite: feiner Wellenschliff für saubere, glatte Schnitte, grober Wellenschliff für Kruste und Fleisch. Je nach Lebensmittel drehst du das Messer einfach um.</p></details>
+      <details><summary>Was ist im Set enthalten?</summary><p>6 ANIRIUS® 2-in-1 Besteckmesser aus Edelstahl 420, ca. 20 cm lang, in einer eleganten Geschenkbox.</p></details>
+      <details><summary>Ist das Messer spülmaschinenfest?</summary><p>Ja, ANIRIUS® ist spülmaschinenfest.</p></details>
+      <details><summary>Wie schnell wird geliefert?</summary><p>Bestellungen verlassen in der Regel innerhalb von 1–2 Werktagen unser Lager. DHL stellt dann meist in 1–3 Werktagen zu.</p></details>
+      <details><summary>Was kostet der Versand?</summary><p>Innerhalb Deutschlands ist der Versand immer kostenlos. In andere EU-Länder versenden wir für 13,99 €.</p></details>
+      <details><summary>Kann ich das Set zurückgeben?</summary><p>Ja, du hast 30 Tage Rückgaberecht.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <img class="foot__logo" src="img/anirius-logo.svg" alt="ANIRIUS">
+  <div class="foot__row">
+    <span>© ANIRIUS®</span>
+    <nav><a href="#">AGB</a><a href="#">Datenschutz</a><a href="#">Impressum</a><a href="#">Widerruf</a><a href="#">Kontakt</a></nav>
+  </div>
+</footer>
+
+<!-- Sticky buy bar (after the finder) -->
+<div class="bar" aria-hidden="false">
+  <span class="bar__txt"><b>ANIRIUS® 2-in-1</b><span data-pack>1 Box · 6 Messer</span></span>
+  <button class="btn btn--sm" type="button" data-sticky-buy>In den Warenkorb · <span data-price>39,95 €</span></button>
+</div>
+<div class="toast" role="status" aria-live="polite"></div>
+<script src="finder.js"></script>
+<style>
+#ak-back{position:fixed;bottom:16px;left:16px;z-index:2147483647;display:flex;align-items:center;gap:6px;padding:9px 14px 9px 11px;border-radius:999px;background:rgba(20,20,20,.82);color:#fff;font:500 14px/1 system-ui,sans-serif;text-decoration:none;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 2px 10px rgba(0,0,0,.18);transition:transform .25s ease,opacity .25s ease}
+@media (max-width:720px){#ak-back{padding:0;width:40px;height:40px;justify-content:center;top:auto;bottom:max(16px,env(safe-area-inset-bottom));left:12px}#ak-back span{display:none}}
+#ak-back.ak-hide{transform:translateY(80px);opacity:0;pointer-events:none}
+</style><a id="ak-back" href="../" aria-label="Zurück zur Übersicht"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg><span>Zurück</span></a><script>(function(){var b=document.getElementById('ak-back'),y=scrollY;addEventListener('scroll',function(){var n=scrollY,d=n-y;if(n<120||d<-6)b.classList.remove('ak-hide');else if(d>6)b.classList.add('ak-hide');if(Math.abs(d)>6||n<120)y=n},{passive:true})})();</script></body>
+</html>
