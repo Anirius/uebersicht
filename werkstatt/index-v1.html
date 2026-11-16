@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ANIRIUS® 2-in-1 – Zwei Schliffe. Eine Klinge.</title>
+<meta name="description" content="ANIRIUS® 2-in-1 Besteckmesser: feiner und grober Wellenschliff an einer Klinge. 6er-Set in Geschenkbox.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shop.css">
+</head>
+<body>
+<div class="progress" aria-hidden="true"><span></span></div>
+
+<header class="nav">
+  <a class="brand" href="#top">ANIRIUS<sup>®</sup></a>
+  <nav class="nav__links" aria-label="Hauptmenü">
+    <a href="#fein">Schliffe</a>
+    <a href="#einsatz">Einsatz</a>
+    <a href="#details">Details</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <a class="nav__buy" href="#kaufen">Kaufen</a>
+  <button class="nav__cart" type="button" data-open-cart aria-label="Warenkorb öffnen">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 7Z"/><path d="M9 7V6a3 3 0 0 1 6 0v1"/></svg>
+    <span class="nav__count" data-cart-count>0</span>
+  </button>
+</header>
+
+<!-- One fixed 3D stage; sections below set its poses as they scroll past. -->
+<canvas class="stage" aria-hidden="true"
+  data-model="../assets/anirius-knife.glb"
+  data-hdr="../assets/anirius-studio.hdr"
+  data-hdr-hd="../assets/anirius-studio-2k.hdr"></canvas>
+<svg class="ann" aria-hidden="true"></svg>
+<div class="callouts" aria-hidden="true">
+  <div class="callout" data-key="hero" data-anchor="fine" data-dx="-170" data-dy="-60" data-malign="r" data-mdy="-56"><b>Feiner Wellenschliff</b><span>Tomaten · Obst · Brötchen</span></div>
+  <div class="callout" data-key="hero" data-anchor="logo" data-dx="-120" data-dy="-110" data-malign="l" data-mdy="96"><b>ANIRIUS® Gravur</b><span>Das Original, per Laser</span></div>
+  <div class="callout" data-key="hero" data-anchor="coarse" data-dx="150" data-dy="100" data-malign="r" data-mdy="64"><b>Grober Wellenschliff</b><span>Kruste · Pizza · Steak</span></div>
+  <div class="callout" data-key="fine" data-anchor="fineC" data-dx="-120" data-dy="-160" data-malign="l" data-mdy="-80"><b>Zahnung ≈ 2 mm</b><span>Glatte, saubere Schnitte</span></div>
+  <div class="callout" data-key="coarse" data-anchor="coarseC" data-dx="120" data-dy="-160" data-malign="r" data-mdy="-80"><b>Zahnung ≈ 7 mm</b><span>Greift jede Kruste</span></div>
+  <div class="callout" data-key="logo" data-anchor="logo" data-dx="-150" data-dy="-150" data-malign="l" data-mdy="-110"><b>Laser-Gravur</b><span>Dauerhaft in der Klinge</span></div>
+</div>
+
+<main id="top">
+  <!-- 1 Hero -->
+  <section class="hero" data-pose="hero">
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="hero__copy">
+      <p class="eyebrow in">ANIRIUS® 2-in-1 Besteckmesser</p>
+      <h1 class="display in">Zwei Schliffe.<br><span>Eine Klinge.</span></h1>
+      <p class="lede in">Feiner Wellenschliff oben, grober unten. Ein Dreh, und du hast das richtige Messer in der Hand.</p>
+      <div class="actions in">
+        <a class="btn" href="#kaufen">Jetzt kaufen</a>
+        <span class="price-tag">39,95 € <small>6er-Set · Geschenkbox</small></span>
+      </div>
+    </div>
+    <ul class="hero__facts in">
+      <li><b>225 mm</b><span>Länge</span></li>
+      <li><b>Edelstahl</b><span>poliert</span></li>
+      <li><b>2 in 1</b><span>Fein &amp; Grob</span></li>
+    </ul>
+    <a class="hero__scroll" href="#fein" aria-label="Weiter scrollen"><i></i></a>
+  </section>
+
+  <!-- 2 Fine edge -->
+  <section class="chapter chapter--left" id="fein" data-pose="fine">
+    <div class="chapter__copy">
+      <p class="eyebrow reveal"><span class="num">01</span>Die feine Seite</p>
+      <h2 class="title reveal">Feiner<br><span>Wellenschliff.</span></h2>
+      <p class="reveal">Für saubere, glatte Schnitte durch Tomaten, Obst, Gemüse und weiche Brötchen. Nichts reißt, nichts quetscht.</p>
+      <ul class="chips reveal"><li>Tomaten</li><li>Obst</li><li>Gemüse</li><li>Brötchen</li></ul>
+    </div>
+  </section>
+
+  <!-- 3 Flip: pinned while the knife turns over -->
+  <section class="flip" aria-label="Messer umdrehen">
+    <div class="flip__mark flip__mark--a" data-pose="flipA"></div>
+    <div class="flip__mark flip__mark--b" data-pose="flipB"></div>
+    <div class="flip__pin">
+      <p class="eyebrow">Umdrehen</p>
+      <h2 class="flip__head">Ein Dreh.</h2>
+      <p class="flip__state"><span data-flip-a>Feine Seite oben</span><span data-flip-b>Grobe Seite oben</span></p>
+      <div class="flip__bar" aria-hidden="true"><i data-flip-bar></i></div>
+    </div>
+  </section>
+
+  <!-- 4 Coarse edge -->
+  <section class="chapter chapter--right" id="grob" data-pose="coarse">
+    <div class="chapter__copy">
+      <p class="eyebrow reveal"><span class="num">02</span>Die grobe Seite</p>
+      <h2 class="title reveal">Grober<br><span>Wellenschliff.</span></h2>
+      <p class="reveal">Die zweite Seite packt Kruste, Baguette, Pizza und Steak mühelos. Kein Messerwechsel, kein zweites Besteck.</p>
+      <ul class="chips reveal"><li>Kruste</li><li>Baguette</li><li>Pizza</li><li>Steak</li></ul>
+    </div>
+  </section>
+
+  <!-- 5 Logo -->
+  <section class="chapter chapter--left chapter--logo" data-pose="logo">
+    <div class="chapter__copy">
+      <p class="eyebrow reveal"><span class="num">03</span>Das Original</p>
+      <h2 class="title reveal">Erkennbar<br><span>am Zeichen.</span></h2>
+      <p class="reveal">Jedes ANIRIUS® Messer trägt das Zeichen auf der Klinge, per Laser graviert. So weißt du, dass du das Original in der Hand hältst.</p>
+    </div>
+  </section>
+
+  <!-- 6 Uses -->
+  <section class="uses" id="einsatz" data-pose="away">
+    <div class="uses__head">
+      <p class="eyebrow reveal">Im Einsatz</p>
+      <h2 class="title reveal">Ein Messer<br><span>statt vier.</span></h2>
+      <p class="reveal">Brot-, Tomaten-, Steak- und Tafelmesser in einem Stück poliertem Stahl.</p>
+    </div>
+    <div class="uses__grid">
+      <figure class="tile reveal" data-parallax="0.06"><div class="tile__img"><img src="img/use-tomatoes.jpg" alt="Tomatenscheiben auf einem Brett" loading="lazy" decoding="async"></div><figcaption><b>Fein</b> Tomaten &amp; Obst</figcaption></figure>
+      <figure class="tile tile--tall reveal" data-parallax="-0.05"><div class="tile__img"><img src="img/use-roll.jpg" alt="Aufgeschnittenes Brötchen" loading="lazy" decoding="async"></div><figcaption><b>Fein</b> Brötchen</figcaption></figure>
+      <figure class="tile reveal" data-parallax="0.04"><div class="tile__img"><img src="img/use-steak.jpg" alt="Steak in Scheiben" loading="lazy" decoding="async"></div><figcaption><b>Grob</b> Steak &amp; Braten</figcaption></figure>
+      <figure class="tile tile--wide reveal" data-parallax="-0.03"><div class="tile__img"><img src="img/coarse-slices.jpg" alt="Brotscheiben mit Kruste" loading="lazy" decoding="async"></div><figcaption><b>Grob</b> Kruste &amp; Baguette</figcaption></figure>
+    </div>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track" data-marquee="1"><span>Brötchen · Tomaten · Obst · Gemüse · Kruste · Baguette · Pizza · Steak · </span><span>Brötchen · Tomaten · Obst · Gemüse · Kruste · Baguette · Pizza · Steak · </span></div>
+    </div>
+  </section>
+
+  <!-- 7 Details -->
+  <section class="details" id="details" data-pose="away">
+    <div class="details__head">
+      <p class="eyebrow reveal">Details</p>
+      <h2 class="title reveal">Gemacht für<br><span>jeden Tag.</span></h2>
+    </div>
+    <div class="details__grid">
+      <article class="card reveal"><span class="card__big"><b data-count="225">225</b><small>mm</small></span><h3>Gesamtlänge</h3><p>Liegt wie ein klassisches Tafelmesser in der Hand.</p></article>
+      <article class="card reveal"><span class="card__big"><b data-count="2">2</b><small>Schliffe</small></span><h3>Eine Klinge</h3><p>Fein oben, grob unten. Du wählst mit einem Dreh.</p></article>
+      <article class="card reveal"><span class="card__big"><b data-count="420">420</b><small>Edelstahl</small></span><h3>Hochglanzpoliert</h3><p>Rostfrei und spülmaschinenfest.</p></article>
+      <article class="card reveal"><span class="card__big"><b data-count="6">6</b><small>Stück</small></span><h3>In der Geschenkbox</h3><p>Ein komplettes Set für den ganzen Tisch.</p></article>
+    </div>
+  </section>
+
+  <!-- 8 Buy -->
+  <section class="buy" id="kaufen" data-pose="buy">
+    <div class="buy__panel reveal">
+      <p class="eyebrow">6er-Set in Geschenkbox</p>
+      <h2 class="title">ANIRIUS® 2-in-1<br><span>Besteckmesser.</span></h2>
+      <p class="buy__price"><b>39,95 €</b><small>inkl. MwSt.</small></p>
+      <ul class="buy__list">
+        <li>6 × ANIRIUS® 2-in-1 Besteckmesser</li>
+        <li>Feiner und grober Wellenschliff</li>
+        <li>Edelstahl 420, spülmaschinenfest</li>
+        <li>Geschenkbox</li>
+      </ul>
+      <div class="buy__row">
+        <div class="qty" role="group" aria-label="Menge">
+          <button type="button" data-qty="-1" aria-label="Weniger">−</button>
+          <output data-qty-value>1</output>
+          <button type="button" data-qty="1" aria-label="Mehr">+</button>
+        </div>
+        <button class="btn btn--wide" type="button" data-add>In den Warenkorb</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 FAQ -->
+  <section class="faq" id="faq" data-pose="end">
+    <div class="faq__head">
+      <p class="eyebrow reveal">Fragen</p>
+      <h2 class="title reveal">Gut zu<br><span>wissen.</span></h2>
+    </div>
+    <div class="faq__list">
+      <details class="reveal"><summary>Welche Seite nehme ich wofür?</summary><p>Die feine Seite für Tomaten, Obst, Gemüse und weiche Brötchen. Die grobe Seite für Kruste, Baguette, Pizza und Steak.</p></details>
+      <details class="reveal"><summary>Ist das Messer spülmaschinenfest?</summary><p>Ja. Die Klinge ist aus Edelstahl 420 und hochglanzpoliert.</p></details>
+      <details class="reveal"><summary>Was ist im Set enthalten?</summary><p>Sechs ANIRIUS® 2-in-1 Besteckmesser in einer Geschenkbox.</p></details>
+      <details class="reveal"><summary>Woran erkenne ich das Original?</summary><p>Am ANIRIUS® Zeichen, das per Laser in die Klinge graviert ist.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot__word" aria-hidden="true">ANIRIUS</div>
+  <div class="foot__row">
+    <span>© ANIRIUS®</span>
+    <nav><a href="#">Impressum</a><a href="#">Datenschutz</a><a href="#">AGB</a></nav>
+    <a href="#top">Nach oben ↑</a>
+  </div>
+  <p class="foot__credit">Fotos: Unsplash</p>
+</footer>
+
+<!-- Sticky buy bar (phones) -->
+<div class="sticky-buy" aria-hidden="true">
+  <span><b>6er-Set</b> 39,95 €</span>
+  <a class="btn btn--sm" href="#kaufen" tabindex="-1">Kaufen</a>
+</div>
+
+<!-- Cart drawer -->
+<div class="cart" data-cart aria-hidden="true">
+  <div class="cart__scrim" data-close-cart></div>
+  <aside class="cart__panel" role="dialog" aria-modal="true" aria-label="Warenkorb">
+    <header class="cart__head"><h2>Warenkorb</h2><button type="button" data-close-cart aria-label="Schließen">×</button></header>
+    <div class="cart__body" data-cart-body></div>
+    <footer class="cart__foot">
+      <p class="cart__sum"><span>Zwischensumme</span><b data-cart-sum>0,00 €</b></p>
+      <p class="cart__note">inkl. MwSt., zzgl. Versand</p>
+      <button class="btn btn--wide" type="button" data-checkout>Zur Kasse</button>
+    </footer>
+  </aside>
+</div>
+<div class="toast" role="status" aria-live="polite"></div>
+
+<script src="shop.js"></script>
+<style>
+#ak-back{position:fixed;bottom:16px;left:16px;z-index:2147483647;display:flex;align-items:center;gap:6px;padding:9px 14px 9px 11px;border-radius:999px;background:rgba(20,20,20,.82);color:#fff;font:500 14px/1 system-ui,sans-serif;text-decoration:none;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 2px 10px rgba(0,0,0,.18);transition:transform .25s ease,opacity .25s ease}
+@media (max-width:720px){#ak-back{padding:0;width:40px;height:40px;justify-content:center;top:auto;bottom:max(16px,env(safe-area-inset-bottom));left:12px}#ak-back span{display:none}}
+#ak-back.ak-hide{transform:translateY(80px);opacity:0;pointer-events:none}
+</style><a id="ak-back" href="../" aria-label="Zurück zur Übersicht"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg><span>Zurück</span></a><script>(function(){var b=document.getElementById('ak-back'),y=scrollY;addEventListener('scroll',function(){var n=scrollY,d=n-y;if(n<120||d<-6)b.classList.remove('ak-hide');else if(d>6)b.classList.add('ak-hide');if(Math.abs(d)>6||n<120)y=n},{passive:true})})();</script></body>
+</html>

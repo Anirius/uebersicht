@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ANIRIUS® 2-in-1 – Das Original</title>
+<meta name="description" content="ANIRIUS® 2-in-1 Besteckmesser: feiner und grober Wellenschliff an einer Klinge.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="hero.css">
+</head>
+<body>
+<section class="hero">
+  <div class="hero__bg" aria-hidden="true"></div>
+
+  <header class="hero__bar">
+    <a class="brand" href="#">ANIRIUS<sup>®</sup></a>
+    <nav class="hero__nav" aria-label="Hauptmenü">
+      <a href="#">Das Messer</a>
+      <a href="#">Schliffe</a>
+      <a href="#">Set</a>
+    </nav>
+    <a class="hero__bar-cta" href="#">Shop</a>
+  </header>
+
+  <canvas class="hero__stage" aria-hidden="true"
+    data-model="../assets/anirius-knife.glb"
+    data-hdr="../assets/anirius-studio.hdr"
+    data-hdr-hd="../assets/anirius-studio-2k.hdr"></canvas>
+
+  <div class="hero__copy">
+    <p class="eyebrow">ANIRIUS® 2-in-1 Besteckmesser</p>
+    <h1 class="title">Zwei Schliffe.<br><span>Eine Klinge.</span></h1>
+    <p class="lede">Feiner Wellenschliff oben, grober unten. Ein Dreh, und du hast das richtige Messer in der Hand.</p>
+    <div class="actions">
+      <a class="btn" href="#">Jetzt entdecken</a>
+      <span class="price">ab 39,95 € <small>6er-Set</small></span>
+    </div>
+  </div>
+
+  <svg class="hero__ann" aria-hidden="true"></svg>
+  <div class="hero__callouts" aria-hidden="true">
+    <div class="callout" data-anchor="fine" data-dx="90" data-dy="-110" data-malign="r" data-mdy="-56">
+      <b>Feiner Wellenschliff</b><span>Tomaten · Obst · Brötchen</span>
+    </div>
+    <div class="callout" data-anchor="logo" data-dx="-70" data-dy="-130" data-malign="l" data-mdy="96">
+      <b>ANIRIUS® Gravur</b><span>Das Original, per Laser</span>
+    </div>
+    <div class="callout" data-anchor="coarse" data-dx="110" data-dy="110" data-malign="r" data-mdy="64">
+      <b>Grober Wellenschliff</b><span>Kruste · Pizza · Steak</span>
+    </div>
+  </div>
+
+  <ul class="hero__facts">
+    <li><b>225 mm</b><span>Länge</span></li>
+    <li><b>Edelstahl</b><span>poliert</span></li>
+    <li><b>2 in 1</b><span>Fein &amp; Grob</span></li>
+  </ul>
+  <div class="hero__scroll" aria-hidden="true"><i></i></div>
+</section>
+<script src="hero.js"></script>
+<style>
+#ak-back{position:fixed;bottom:16px;left:16px;z-index:2147483647;display:flex;align-items:center;gap:6px;padding:9px 14px 9px 11px;border-radius:999px;background:rgba(20,20,20,.82);color:#fff;font:500 14px/1 system-ui,sans-serif;text-decoration:none;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 2px 10px rgba(0,0,0,.18);transition:transform .25s ease,opacity .25s ease}
+@media (max-width:720px){#ak-back{padding:0;width:40px;height:40px;justify-content:center;top:auto;bottom:max(16px,env(safe-area-inset-bottom));left:12px}#ak-back span{display:none}}
+#ak-back.ak-hide{transform:translateY(80px);opacity:0;pointer-events:none}
+</style><a id="ak-back" href="../" aria-label="Zurück zur Übersicht"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg><span>Zurück</span></a><script>(function(){var b=document.getElementById('ak-back'),y=scrollY;addEventListener('scroll',function(){var n=scrollY,d=n-y;if(n<120||d<-6)b.classList.remove('ak-hide');else if(d>6)b.classList.add('ak-hide');if(Math.abs(d)>6||n<120)y=n},{passive:true})})();</script></body>
+</html>

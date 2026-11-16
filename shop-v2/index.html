@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ANIRIUS® 2-in-1 Besteckmesser – Zwei Schliffe. Eine Klinge.</title>
+<meta name="description" content="Das ANIRIUS® 2-in-1 Besteckmesser: feiner und grober Wellenschliff an einer Klinge. 6er-Set in Geschenkbox. Bekannt aus Die Höhle der Löwen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div class="progress" aria-hidden="true"><span></span></div>
+
+<header class="nav">
+  <a class="brand" href="#top">ANIRIUS<sup>®</sup></a>
+  <nav class="nav__links" aria-label="Hauptmenü">
+    <a href="#schliffe">Schliffe</a>
+    <a href="#tv">Aus dem TV</a>
+    <a href="#geschenk">Geschenk</a>
+    <a href="#faq">Fragen</a>
+  </nav>
+  <a class="nav__buy" href="#kaufen">Set wählen · 39,95 €</a>
+  <button class="nav__cart" type="button" data-open-cart aria-label="Warenkorb öffnen">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 7Z"/><path d="M9 7V6a3 3 0 0 1 6 0v1"/></svg>
+    <span class="nav__count" data-cart-count>0</span>
+  </button>
+</header>
+
+<!-- Fixed layers: photo backdrops (shallow focus), the 3D knife, grain, hero callouts -->
+<div class="backdrops" aria-hidden="true">
+  <div class="bd" data-at="2" style="background-image:url(img/food-table.jpg)"></div>
+  <div class="bd" data-at="3" style="background-image:url(img/w-bread.jpg)"></div>
+  <div class="bd" data-at="5" style="background-image:url(img/w-table.jpg)"></div>
+</div>
+<div class="tone" aria-hidden="true"></div>
+<canvas class="stage" aria-hidden="true"
+  data-model="../assets/anirius-knife.glb"
+  data-hdr="../assets/anirius-studio.hdr"
+  data-hdr-hd="../assets/anirius-studio-2k.hdr"
+  data-photos="img/food-table.jpg,img/w-bread.jpg,img/w-table.jpg"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<svg class="ann" aria-hidden="true"></svg>
+<div class="callouts" aria-hidden="true">
+  <div class="callout" data-anchor="fine" data-dx="-170" data-dy="-60" data-malign="r" data-mdy="-56"><b>Feiner Wellenschliff</b><span>Tomaten · Obst · Brötchen</span></div>
+  <div class="callout" data-anchor="logo" data-dx="-120" data-dy="-110" data-malign="l" data-mdy="96"><b>ANIRIUS® Gravur</b><span>Das Original, per Laser</span></div>
+  <div class="callout" data-anchor="coarse" data-dx="150" data-dy="100" data-malign="r" data-mdy="64"><b>Grober Wellenschliff</b><span>Kruste · Pizza · Steak</span></div>
+</div>
+
+<main id="top">
+  <!-- 0 Hero -->
+  <section class="ch hero" data-ch="0">
+    <div class="hero__copy">
+      <p class="badge in"><i></i>Bekannt aus „Die Höhle der Löwen“</p>
+      <h1 class="title in">Zwei Schliffe.<br><span>Eine Klinge.</span></h1>
+      <p class="lede in">Feiner Wellenschliff oben, grober unten. Ein Dreh, und du hast das richtige Messer in der Hand.</p>
+      <div class="actions in">
+        <a class="btn" href="#kaufen">Set wählen · 39,95 €</a>
+        <a class="rating" href="#faq"><span class="stars" aria-hidden="true">★★★★★</span> 4,4 von 5 · 84 Bewertungen</a>
+      </div>
+    </div>
+    <ul class="hero__facts in">
+      <li><b>6 Messer</b><span>in Geschenkbox</span></li>
+      <li><b>Edelstahl 420</b><span>lebensmittelecht</span></li>
+      <li><b>Kostenloser</b><span>Versand in DE</span></li>
+    </ul>
+  </section>
+
+  <!-- Press strip -->
+  <section class="press" aria-label="Bekannt aus">
+    <p class="press__label">Bekannt aus</p>
+    <div class="press__track" data-marquee>
+      <span>Die Höhle der Löwen</span><span>VOX</span><span>RTL+</span><span>Schwäbische Zeitung</span><span>deutsche-startups.de</span><span>LEADERSNET</span>
+      <span>Die Höhle der Löwen</span><span>VOX</span><span>RTL+</span><span>Schwäbische Zeitung</span><span>deutsche-startups.de</span><span>LEADERSNET</span>
+    </div>
+  </section>
+
+  <!-- 1 Messer-Berg -->
+  <section class="ch pile" data-ch="1">
+    <div class="pile__copy reveal">
+      <p class="eyebrow">Weniger Abwasch</p>
+      <h2 class="title">Schluss mit dem<br><span>Messer-Berg.</span></h2>
+      <p class="lede">Brötchen, Tomate, Pizza, Steak: Statt vier verschiedener Messer liegt eins auf dem Tisch.</p>
+    </div>
+    <ul class="pile__stats">
+      <li class="reveal"><b>1</b><small>statt 4</small><span>Ein Messer für alles, vom Frühstück bis zum Steak.</span></li>
+      <li class="reveal"><b>−</b><small>Weniger spülen</small><span>Ein Messer pro Person statt einem ganzen Stapel.</span></li>
+      <li class="reveal"><b>+</b><small>Mehr Ordnung</small><span>Eine Schublade, ein Messer, fertig.</span></li>
+    </ul>
+  </section>
+
+  <!-- 2 Fine -->
+  <section class="ch world" id="schliffe" data-ch="2">
+    <div class="world__copy reveal">
+      <p class="eyebrow"><b>01</b>Die feine Seite</p>
+      <h2 class="title">Für alles<br><span>Zarte.</span></h2>
+      <p class="lede">Feiner Wellenschliff für saubere, glatte Schnitte: Tomaten, Obst, Gemüse und weiche Brötchen.</p>
+      <ul class="chips"><li>Tomaten</li><li>Obst</li><li>Gemüse</li><li>Brötchen</li></ul>
+    </div>
+  </section>
+
+  <!-- 3 Coarse -->
+  <section class="ch world" data-ch="3">
+    <div class="world__copy reveal">
+      <p class="eyebrow"><b>02</b>Die grobe Seite</p>
+      <h2 class="title">Für alles<br><span>Krosse.</span></h2>
+      <p class="lede">Einfach umdrehen: Der grobe Wellenschliff packt Kruste und Fleisch, von Baguette bis Steak.</p>
+      <ul class="chips"><li>Kruste</li><li>Baguette</li><li>Pizza</li><li>Steak</li></ul>
+    </div>
+  </section>
+
+  <!-- 4 TV -->
+  <section class="ch tv" id="tv" data-ch="4">
+    <div class="tv__inner">
+      <div class="tv__copy reveal">
+        <p class="eyebrow">VOX · Die Höhle der Löwen · Staffel 19</p>
+        <h2 class="title">Die Löwen haben<br><span>es getestet.</span></h2>
+        <p class="lede">Der Schneide-Test aus der Sendung: ein Messer, zwei Schliffe, live vor den Löwen.</p>
+      </div>
+      <a class="tv__player reveal" href="https://anirius.de/" target="_blank" rel="noopener" aria-label="Den Original-Ausschnitt auf anirius.de ansehen">
+        <span class="tv__glow" aria-hidden="true"></span>
+        <span class="tv__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+        <span class="tv__label"><b>Jetzt ansehen</b>Der Original-Ausschnitt aus der Sendung</span>
+        <span class="tv__tag">VOX</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- 5 Gift -->
+  <section class="ch gift" id="geschenk" data-ch="5">
+    <div class="gift__copy reveal">
+      <p class="eyebrow">Die Geschenkidee</p>
+      <h2 class="title">Auspacken. Staunen.<br><span>Genießen.</span></h2>
+      <ul class="ticks">
+        <li>6 ANIRIUS® 2-in-1 Besteckmesser, eins für jeden</li>
+        <li>In edler Geschenkbox, ohne Einpacken</li>
+        <li>Vom Frühstück bis zum Steak</li>
+        <li>Spülmaschinenfest &amp; lebensmittelecht</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 6 Buy -->
+  <section class="ch buy" id="kaufen" data-ch="6">
+    <div class="buy__inner">
+      <div class="buy__head reveal">
+        <p class="eyebrow">In edler Geschenkbox · sofort verschenkbar</p>
+        <h2 class="title">ANIRIUS® 2-in-1<br><span>Besteckmesser.</span></h2>
+        <a class="rating" href="#faq"><span class="stars" aria-hidden="true">★★★★★</span> 4,4 von 5 · 84 Bewertungen</a>
+        <ul class="specs">
+          <li>Edelstahl 420</li><li>Lebensmittelecht</li><li>Spülmaschinenfest</li><li>Inklusive Geschenkbox</li>
+        </ul>
+      </div>
+      <form class="buy__box reveal" data-buy>
+        <p class="buy__label">Menge wählen</p>
+        <label class="opt">
+          <input type="radio" name="set" value="1" checked>
+          <span class="opt__body"><b>1 Set</b><small>6 Messer · 1 Geschenkbox</small></span>
+          <span class="opt__price"><b>39,95 €</b></span>
+        </label>
+        <label class="opt">
+          <input type="radio" name="set" value="2">
+          <span class="opt__flag">Am beliebtesten</span>
+          <span class="opt__body"><b>2 Sets</b><small>Du sparst 15 € – perfekt zum Verschenken</small></span>
+          <span class="opt__price"><s>79,90 €</s><b>64,90 €</b></span>
+        </label>
+        <button class="btn btn--wide" type="submit" data-add>In den Warenkorb · <span data-total>39,95 €</span></button>
+        <ul class="trust">
+          <li>Kostenloser Versand in ganz Deutschland</li>
+          <li>DHL in 1–3 Werktagen</li>
+          <li>30 Tage Rückgaberecht</li>
+          <li>PayPal, Klarna oder Karte</li>
+        </ul>
+      </form>
+    </div>
+  </section>
+
+  <!-- 7 FAQ -->
+  <section class="ch faq" id="faq" data-ch="7">
+    <div class="faq__head reveal">
+      <p class="eyebrow">Fragen?</p>
+      <h2 class="title">Wir helfen<br><span>persönlich.</span></h2>
+      <p class="lede">Unser Kundenservice hilft gern, vor und nach dem Kauf.</p>
+      <a class="btn btn--ghost" href="#">Kundenservice kontaktieren</a>
+    </div>
+    <div class="faq__list">
+      <details class="reveal"><summary>Wie funktioniert das Messer?</summary><p>Das Messer hat eine feine und eine grobe Seite: feiner Wellenschliff für saubere, glatte Schnitte, grober Wellenschliff für Kruste und Fleisch. Je nach Lebensmittel drehst du das Messer einfach um.</p></details>
+      <details class="reveal"><summary>Wofür kann ich es benutzen?</summary><p>Vom Frühstück bis zum Abendessen: Brötchen, Baguette, Obst, Gemüse, Pizza und Steak – ein Messer statt vier.</p></details>
+      <details class="reveal"><summary>Was ist im Set enthalten?</summary><p>6 ANIRIUS® 2-in-1 Besteckmesser aus Edelstahl 420, ca. 20 cm lang, in einer eleganten Geschenkbox.</p></details>
+      <details class="reveal"><summary>Ist das Messer spülmaschinenfest?</summary><p>Ja, ANIRIUS® ist spülmaschinenfest.</p></details>
+      <details class="reveal"><summary>Wie schnell wird geliefert?</summary><p>Bestellungen verlassen in der Regel innerhalb von 1–2 Werktagen unser Lager. DHL stellt dann meist in 1–3 Werktagen zu.</p></details>
+      <details class="reveal"><summary>Was kostet der Versand?</summary><p>Innerhalb Deutschlands ist der Versand immer kostenlos. In andere EU-Länder versenden wir für 13,99 €.</p></details>
+      <details class="reveal"><summary>Kann ich das Set zurückgeben?</summary><p>Ja, du hast 30 Tage Rückgaberecht.</p></details>
+      <details class="reveal"><summary>Wie kann ich bezahlen?</summary><p>Per PayPal, Klarna oder Karte.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot__word" aria-hidden="true">ANIRIUS</div>
+  <div class="foot__row">
+    <span>© ANIRIUS®</span>
+    <nav aria-label="Rechtliches"><a href="#">AGB</a><a href="#">Datenschutz</a><a href="#">Impressum</a><a href="#">Widerrufsbelehrung</a><a href="#">Kontakt</a></nav>
+  </div>
+  <p class="foot__credit">Fotos: Metin Ozer, Volodymyr Lymariev, M F · Unsplash</p>
+</footer>
+
+<div class="sticky-buy" aria-hidden="true"><span><b>6er-Set</b> 39,95 €</span><a class="btn btn--sm" href="#kaufen" tabindex="-1">Set wählen</a></div>
+
+<div class="cart" data-cart aria-hidden="true">
+  <div class="cart__scrim" data-close-cart></div>
+  <aside class="cart__panel" role="dialog" aria-modal="true" aria-label="Warenkorb">
+    <header class="cart__head"><h2>Warenkorb</h2><button type="button" data-close-cart aria-label="Schließen">×</button></header>
+    <div class="cart__body" data-cart-body></div>
+    <footer class="cart__foot">
+      <p class="cart__sum"><span>Zwischensumme</span><b data-cart-sum>0,00 €</b></p>
+      <p class="cart__note">inkl. MwSt. · Kostenloser Versand in Deutschland</p>
+      <button class="btn btn--wide" type="button" data-checkout>Zur Kasse</button>
+    </footer>
+  </aside>
+</div>
+<div class="toast" role="status" aria-live="polite"></div>
+
+<script src="main.js"></script>
+<style>
+#ak-back{position:fixed;bottom:16px;left:16px;z-index:2147483647;display:flex;align-items:center;gap:6px;padding:9px 14px 9px 11px;border-radius:999px;background:rgba(20,20,20,.82);color:#fff;font:500 14px/1 system-ui,sans-serif;text-decoration:none;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 2px 10px rgba(0,0,0,.18);transition:transform .25s ease,opacity .25s ease}
+@media (max-width:720px){#ak-back{padding:0;width:40px;height:40px;justify-content:center;top:auto;bottom:max(16px,env(safe-area-inset-bottom));left:12px}#ak-back span{display:none}}
+#ak-back.ak-hide{transform:translateY(80px);opacity:0;pointer-events:none}
+</style><a id="ak-back" href="../" aria-label="Zurück zur Übersicht"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg><span>Zurück</span></a><script>(function(){var b=document.getElementById('ak-back'),y=scrollY;addEventListener('scroll',function(){var n=scrollY,d=n-y;if(n<120||d<-6)b.classList.remove('ak-hide');else if(d>6)b.classList.add('ak-hide');if(Math.abs(d)>6||n<120)y=n},{passive:true})})();</script></body>
+</html>

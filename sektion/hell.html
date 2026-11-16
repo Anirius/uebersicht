@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anirius 3D – Preview</title>
+  <link rel="stylesheet" href="../assets/anirius-knife-3d.css">
+  <script src="../assets/anirius-knife-3d.js" defer></script>
+  <!-- Preview only: ?theme=studio|luxury (default dark), ?cam=macro|along|profile|angle, ?glide=false (in Shopify this is the section's "Stil" setting). -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const t = new URLSearchParams(location.search).get('theme');
+      if (t) document.querySelector('anirius-knife-3d').dataset.theme = t;
+      const q = new URLSearchParams(location.search);
+      if (q.get('cam')) document.querySelector('anirius-knife-3d').dataset.closeup = q.get('cam');
+      if (q.get('glide')) document.querySelector('anirius-knife-3d').dataset.glide = q.get('glide');
+      const h = q.get('hdr');
+      if (h === 'none') delete document.querySelector('anirius-knife-3d').dataset.hdr;
+      
+      if (t === 'luxury') document.body.style.background = '#0b0a09';
+      if (!t || t === 'dark') document.body.style.background = '#1c1c1c';
+    });
+  </script>
+  <style>
+    body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background: #fff; color: #111; }
+    .filler { min-height: 70vh; display: grid; place-items: center; font-size: 20px; color: #888; border-bottom: 1px solid #eee; }
+  </style>
+</head>
+<body>
+  <div class="filler">Theme-Inhalt oberhalb ↓</div>
+
+  <!-- Mirrors sections/anirius-knife-3d.liquid output with preset blocks -->
+  <anirius-knife-3d class="ak3d" data-model="../assets/anirius-knife.glb" data-hdr="../assets/anirius-studio.hdr" data-hdr-hd="../assets/anirius-studio-2k.hdr" data-view="overview" data-theme="studio"
+    data-label-fine="Feiner Wellenschliff" data-label-coarse="Grober Wellenschliff"
+    style="--ak-steps: 6; --ak-step-vh: 100;">
+    <div class="ak3d__stage" data-ak-stage>
+      <div class="ak3d__canvas" data-ak-canvas></div>
+      <div class="ak3d__loader" aria-hidden="true"></div>
+      <div class="ak3d__poster"></div>
+      <div class="ak3d__panels">
+        <div class="ak3d__panel" data-ak-panel data-view="overview">
+          <p class="ak3d__eyebrow">ANIRIUS® 2-in-1</p>
+          <h2 class="ak3d__heading">Ein Messer statt vier.</h2>
+          <div class="ak3d__text"><p>Zwei Wellenschliffe an einer Klinge. Für Brötchen, Obst, Pizza und Steak.</p></div>
+        </div>
+        <div class="ak3d__panel" data-ak-panel data-view="fine">
+          <p class="ak3d__eyebrow">Seite 1 · Fein</p>
+          <h2 class="ak3d__heading">Feiner Wellenschliff</h2>
+          <div class="ak3d__text"><p>Für saubere, glatte Schnitte – Obst, Gemüse, Tomaten und weiche Brötchen.</p></div>
+        </div>
+        <div class="ak3d__panel" data-ak-panel data-view="flip">
+          <p class="ak3d__eyebrow">Der Dreh</p>
+          <h2 class="ak3d__heading">Einfach umdrehen.</h2>
+          <div class="ak3d__text"><p>Je nach Essen die Seite wechseln – ein Dreh, und du hast das passende Messer in der Hand.</p></div>
+        </div>
+        <div class="ak3d__panel" data-ak-panel data-view="coarse">
+          <p class="ak3d__eyebrow">Seite 2 · Grob</p>
+          <h2 class="ak3d__heading">Grober Wellenschliff</h2>
+          <div class="ak3d__text"><p>Packt Kruste, Baguette, Pizza und Steak mühelos.</p></div>
+        </div>
+        <div class="ak3d__panel" data-ak-panel data-view="logo">
+          <p class="ak3d__eyebrow">ANIRIUS® Original</p>
+          <h2 class="ak3d__heading">Das Original.</h2>
+          <div class="ak3d__text"><p>Bekannt aus „Die Höhle der Löwen“ – erkennbar am ANIRIUS Zeichen auf der Klinge.</p></div>
+        </div>
+        <div class="ak3d__panel" data-ak-panel data-view="finale">
+          <p class="ak3d__eyebrow">Edelstahl 420 · Spülmaschinenfest</p>
+          <h2 class="ak3d__heading">Schluss mit dem Messer-Berg.</h2>
+          <div class="ak3d__text"><p>6er-Set in edler Geschenkbox.</p></div>
+          <div class="ak3d__cta">
+            <span class="ak3d__price">39,95 €</span>
+            <a class="ak3d__button" href="#">In den Warenkorb</a>
+          </div>
+        </div>
+      </div>
+      <nav class="ak3d__progress" aria-label="Messer-Ansichten">
+        <span class="ak3d__counter" data-ak-counter>01 / 06</span>
+        <span class="ak3d__track"><span class="ak3d__bar" data-ak-bar></span></span>
+        <span class="ak3d__dots">
+        <button type="button" class="ak3d__dot is-active" data-ak-dot aria-label="Ein Messer statt vier."></button>
+        <button type="button" class="ak3d__dot" data-ak-dot aria-label="Feiner Wellenschliff"></button>
+        <button type="button" class="ak3d__dot" data-ak-dot aria-label="Einfach umdrehen."></button>
+        <button type="button" class="ak3d__dot" data-ak-dot aria-label="Grober Wellenschliff"></button>
+        <button type="button" class="ak3d__dot" data-ak-dot aria-label="Das Original."></button>
+        <button type="button" class="ak3d__dot" data-ak-dot aria-label="Schluss mit dem Messer-Berg."></button>
+        </span>
+      </nav>
+      <div class="ak3d__hint" aria-hidden="true">Scrollen</div>
+    </div>
+  </anirius-knife-3d>
+
+  <div class="filler">Theme-Inhalt unterhalb ↑</div>
+<style>
+#ak-back{position:fixed;bottom:16px;left:16px;z-index:2147483647;display:flex;align-items:center;gap:6px;padding:9px 14px 9px 11px;border-radius:999px;background:rgba(20,20,20,.82);color:#fff;font:500 14px/1 system-ui,sans-serif;text-decoration:none;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 2px 10px rgba(0,0,0,.18);transition:transform .25s ease,opacity .25s ease}
+@media (max-width:720px){#ak-back{padding:0;width:40px;height:40px;justify-content:center;top:auto;bottom:max(16px,env(safe-area-inset-bottom));left:12px}#ak-back span{display:none}}
+#ak-back.ak-hide{transform:translateY(80px);opacity:0;pointer-events:none}
+</style><a id="ak-back" href="../" aria-label="Zurück zur Übersicht"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg><span>Zurück</span></a><script>(function(){var b=document.getElementById('ak-back'),y=scrollY;addEventListener('scroll',function(){var n=scrollY,d=n-y;if(n<120||d<-6)b.classList.remove('ak-hide');else if(d>6)b.classList.add('ak-hide');if(Math.abs(d)>6||n<120)y=n},{passive:true})})();</script></body>
+</html>

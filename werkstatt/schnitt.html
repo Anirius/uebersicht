@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ANIRIUS® – Der Schnitt</title>
+<meta name="description" content="ANIRIUS® 2-in-1 Besteckmesser: feiner und grober Wellenschliff an einer Klinge. Bekannt aus Die Höhle der Löwen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="schnitt.css">
+</head>
+<body>
+<div class="cursor" aria-hidden="true"><i class="cursor__dot"></i><i class="cursor__ring"><span>Ansehen</span></i></div>
+
+<header class="nav">
+  <a class="brand" href="#top">ANIRIUS<sup>®</sup></a>
+  <span class="nav__tv"><i></i>Bekannt aus „Die Höhle der Löwen“</span>
+  <a class="nav__cta magnetic" href="#kaufen"><span>Set wählen · 39,95 €</span></a>
+</header>
+
+<!-- The 3D knife and its soft shadow on the page -->
+<div class="kshadow" aria-hidden="true"></div>
+<canvas class="stage" aria-hidden="true" data-model="../assets/anirius-knife.glb"></canvas>
+
+<main id="top">
+  <!-- 1 Hero: the knife slices through the headline -->
+  <section class="cut" data-scene="cut">
+    <div class="cut__pin">
+      <p class="cut__kicker" data-split>Ein Messer. Zwei Schliffe. Kein Messer-Berg.</p>
+      <div class="cut__type" aria-label="Zwei Schliffe. Eine Klinge.">
+        <!-- The same headline twice; each copy keeps one side of the blade line, then they part -->
+        <div class="cut__half cut__half--a" aria-hidden="true"><span class="w w--1">ZWEI</span><span class="w w--2">SCHLIFFE.</span></div>
+        <div class="cut__half cut__half--b" aria-hidden="true"><span class="w w--1">ZWEI</span><span class="w w--2">SCHLIFFE.</span></div>
+        <div class="cut__seam" aria-hidden="true"><span>Eine Klinge.</span></div>
+      </div>
+      <div class="cut__foot">
+        <p class="rating"><span class="stars">★★★★★</span> 4,4 von 5 · 84 Bewertungen</p>
+        <p class="cut__scroll"><i></i>Scrollen zum Schneiden</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 Marquee band -->
+  <div class="band" aria-hidden="true">
+    <div class="band__track" data-marquee="1"><span>FEIN</span><b>✕</b><span>GROB</span><b>✕</b><span>FEIN</span><b>✕</b><span>GROB</span><b>✕</b><span>FEIN</span><b>✕</b><span>GROB</span><b>✕</b><span>FEIN</span><b>✕</b><span>GROB</span><b>✕</b></div>
+  </div>
+
+  <!-- 3 Two sides: images open from circles, the knife turns between them -->
+  <section class="sides" data-scene="sides">
+    <div class="sides__pin">
+      <figure class="side side--fine" data-hover>
+        <div class="side__img" style="background-image:url(img/k-tomatoes.jpg)"></div>
+        <figcaption><b>Fein</b><span>Tomaten · Obst · Gemüse · Brötchen</span></figcaption>
+      </figure>
+      <figure class="side side--coarse" data-hover>
+        <div class="side__img" style="background-image:url(img/k-baguettes.jpg)"></div>
+        <figcaption><b>Grob</b><span>Kruste · Baguette · Pizza · Steak</span></figcaption>
+      </figure>
+      <div class="sides__label">
+        <p class="sides__state"><span data-state-a>Feine Seite vorn</span><span data-state-b>Grobe Seite vorn</span></p>
+        <h2 class="display" data-split>Ein Dreh.</h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 Horizontal gallery -->
+  <section class="gallery" data-scene="gallery">
+    <div class="gallery__pin">
+      <div class="gallery__head">
+        <p class="eyebrow">Vom Frühstück bis zum Steak</p>
+        <h2 class="display" data-split>Ein Messer<br>für alles.</h2>
+      </div>
+      <div class="gallery__track">
+        <figure class="card" data-hover><div class="card__img" style="background-image:url(img/use-roll.jpg)"></div><figcaption><i>01</i>Brötchen<small>fein</small></figcaption></figure>
+        <figure class="card" data-hover><div class="card__img" style="background-image:url(img/use-tomatoes.jpg)"></div><figcaption><i>02</i>Tomaten<small>fein</small></figcaption></figure>
+        <figure class="card" data-hover><div class="card__img" style="background-image:url(img/fine-vine.jpg)"></div><figcaption><i>03</i>Obst &amp; Gemüse<small>fein</small></figcaption></figure>
+        <figure class="card" data-hover><div class="card__img" style="background-image:url(img/coarse-slices.jpg)"></div><figcaption><i>04</i>Baguette<small>grob</small></figcaption></figure>
+        <figure class="card" data-hover><div class="card__img" style="background-image:url(img/use-steak.jpg)"></div><figcaption><i>05</i>Steak<small>grob</small></figcaption></figure>
+      </div>
+      <div class="gallery__bar" aria-hidden="true"><i></i></div>
+    </div>
+  </section>
+
+  <!-- 5 One instead of four -->
+  <section class="four" data-scene="four">
+    <ul class="four__list">
+      <li class="strike"><span>Brotmesser</span></li>
+      <li class="strike"><span>Tomatenmesser</span></li>
+      <li class="strike"><span>Steakmesser</span></li>
+      <li class="strike"><span>Tafelmesser</span></li>
+    </ul>
+    <div class="four__one">
+      <b class="four__num" data-count="1">1</b>
+      <p class="display" data-split>statt 4.</p>
+      <p class="lede">Weniger Abwasch, mehr Ordnung. Ein ANIRIUS® pro Person, vom Frühstück bis zum Steak.</p>
+    </div>
+  </section>
+
+  <!-- 6 TV -->
+  <section class="tv" data-scene="tv">
+    <div class="tv__wrap">
+      <p class="eyebrow">VOX · Die Höhle der Löwen · Staffel 19</p>
+      <h2 class="display" data-split>Die Löwen haben es getestet.</h2>
+      <a class="tv__play magnetic" href="https://anirius.de/" target="_blank" rel="noopener" data-hover><span>▶</span><em>Zum Original-Ausschnitt</em></a>
+      <div class="tv__press" aria-label="Bekannt aus"><span>VOX</span><span>RTL+</span><span>Schwäbische Zeitung</span><span>deutsche-startups.de</span><span>LEADERSNET</span></div>
+    </div>
+  </section>
+
+  <!-- 7 Buy -->
+  <section class="buy" id="kaufen" data-scene="buy">
+    <div class="buy__grid">
+      <div class="buy__copy">
+        <p class="eyebrow">Auspacken. Staunen. Genießen.</p>
+        <h2 class="price" aria-label="39,95 Euro"><span data-split>39,95</span><small>€</small></h2>
+        <ul class="ticks">
+          <li>6 ANIRIUS® 2-in-1 Besteckmesser, eins für jeden</li>
+          <li>In edler Geschenkbox, ohne Einpacken</li>
+          <li>Edelstahl 420 · lebensmittelecht · spülmaschinenfest</li>
+        </ul>
+      </div>
+      <form class="buy__box" data-buy>
+        <label class="opt"><input type="radio" name="set" value="1" checked><span><b>1 Set</b><small>6 Messer · 1 Geschenkbox</small></span><em>39,95 €</em></label>
+        <label class="opt"><input type="radio" name="set" value="2"><i>Am beliebtesten</i><span><b>2 Sets</b><small>Du sparst 15 € – perfekt zum Verschenken</small></span><em><s>79,90 €</s> 64,90 €</em></label>
+        <button class="btn magnetic" type="submit"><span>In den Warenkorb · <b data-total>39,95 €</b></span></button>
+        <p class="trust">Kostenloser Versand in DE · DHL 1–3 Werktage · 30 Tage Rückgabe · PayPal, Klarna, Karte</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="faq">
+    <h2 class="display" data-split>Fragen?</h2>
+    <div class="faq__list">
+      <details><summary>Wie funktioniert das Messer?</summary><p>Das Messer hat eine feine und eine grobe Seite: feiner Wellenschliff für saubere, glatte Schnitte, grober Wellenschliff für Kruste und Fleisch. Je nach Lebensmittel drehst du das Messer einfach um.</p></details>
+      <details><summary>Was ist im Set enthalten?</summary><p>6 ANIRIUS® 2-in-1 Besteckmesser aus Edelstahl 420, ca. 20 cm lang, in einer eleganten Geschenkbox.</p></details>
+      <details><summary>Ist das Messer spülmaschinenfest?</summary><p>Ja, ANIRIUS® ist spülmaschinenfest.</p></details>
+      <details><summary>Wie schnell wird geliefert?</summary><p>Bestellungen verlassen in der Regel innerhalb von 1–2 Werktagen unser Lager. DHL stellt dann meist in 1–3 Werktagen zu.</p></details>
+      <details><summary>Was kostet der Versand?</summary><p>Innerhalb Deutschlands ist der Versand immer kostenlos. In andere EU-Länder versenden wir für 13,99 €.</p></details>
+      <details><summary>Kann ich das Set zurückgeben?</summary><p>Ja, du hast 30 Tage Rückgaberecht.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot__big" aria-hidden="true"><span>ANIRIUS</span></div>
+  <div class="foot__row"><span>© ANIRIUS®</span><nav><a href="#">AGB</a><a href="#">Datenschutz</a><a href="#">Impressum</a><a href="#">Widerruf</a><a href="#">Kontakt</a></nav></div>
+  <p class="foot__credit">Fotos: Unsplash</p>
+</footer>
+<div class="toast" role="status" aria-live="polite"></div>
+<script src="schnitt.js"></script>
+<style>
+#ak-back{position:fixed;bottom:16px;left:16px;z-index:2147483647;display:flex;align-items:center;gap:6px;padding:9px 14px 9px 11px;border-radius:999px;background:rgba(20,20,20,.82);color:#fff;font:500 14px/1 system-ui,sans-serif;text-decoration:none;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 2px 10px rgba(0,0,0,.18);transition:transform .25s ease,opacity .25s ease}
+@media (max-width:720px){#ak-back{padding:0;width:40px;height:40px;justify-content:center;top:auto;bottom:max(16px,env(safe-area-inset-bottom));left:12px}#ak-back span{display:none}}
+#ak-back.ak-hide{transform:translateY(80px);opacity:0;pointer-events:none}
+</style><a id="ak-back" href="../" aria-label="Zurück zur Übersicht"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg><span>Zurück</span></a><script>(function(){var b=document.getElementById('ak-back'),y=scrollY;addEventListener('scroll',function(){var n=scrollY,d=n-y;if(n<120||d<-6)b.classList.remove('ak-hide');else if(d>6)b.classList.add('ak-hide');if(Math.abs(d)>6||n<120)y=n},{passive:true})})();</script></body>
+</html>

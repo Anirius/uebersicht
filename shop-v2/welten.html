@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ANIRIUS® 2-in-1 – Zwei Welten, eine Klinge</title>
+<meta name="description" content="Das ANIRIUS® 2-in-1 Besteckmesser: feiner und grober Wellenschliff an einer Klinge.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="welten.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="index.html">ANIRIUS<sup>®</sup></a>
+  <a class="nav__buy" href="#set">6er-Set · 39,95 €</a>
+</header>
+
+<!-- Fixed layers: blurred photo backdrops, the knife, grain -->
+<div class="backdrops" aria-hidden="true">
+  <div class="bd" style="background-image:url(img/w-kitchen.jpg);filter:blur(9px) brightness(1.25) saturate(1.15)"></div>
+  <div class="bd" style="background-image:url(img/food-table.jpg)"></div>
+  <div class="bd" style="background-image:url(img/w-bread.jpg)"></div>
+  <div class="bd" style="background-image:url(img/w-table.jpg)"></div>
+</div>
+<div class="tone" aria-hidden="true"></div>
+<canvas class="stage" aria-hidden="true" data-model="../assets/anirius-knife.glb"
+  data-photos="img/w-kitchen.jpg,img/food-table.jpg,img/w-bread.jpg,img/w-table.jpg"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<svg class="ann" aria-hidden="true"></svg>
+<div class="callouts" aria-hidden="true">
+  <div class="callout" data-anchor="fine" data-dx="-170" data-dy="-60" data-malign="r" data-mdy="-56"><b>Feiner Wellenschliff</b><span>Tomaten · Obst · Brötchen</span></div>
+  <div class="callout" data-anchor="logo" data-dx="-120" data-dy="-110" data-malign="l" data-mdy="96"><b>ANIRIUS® Gravur</b><span>Das Original, per Laser</span></div>
+  <div class="callout" data-anchor="coarse" data-dx="150" data-dy="100" data-malign="r" data-mdy="64"><b>Grober Wellenschliff</b><span>Kruste · Pizza · Steak</span></div>
+</div>
+
+<main>
+  <section class="ch ch--hero" data-ch="0">
+    <div class="copy">
+      <p class="eyebrow">ANIRIUS® 2-in-1 Besteckmesser</p>
+      <h1 class="title">Zwei Schliffe.<br><span>Eine Klinge.</span></h1>
+      <p class="lede">Feiner Wellenschliff oben, grober unten. Ein Dreh, und du hast das richtige Messer in der Hand.</p>
+      <div class="actions">
+        <a class="btn" href="#set">Jetzt kaufen</a>
+        <span class="price-tag">39,95 € <small>6er-Set · Geschenkbox</small></span>
+      </div>
+    </div>
+    <ul class="facts">
+      <li><b>225 mm</b><span>Länge</span></li>
+      <li><b>Edelstahl</b><span>poliert</span></li>
+      <li><b>2 in 1</b><span>Fein &amp; Grob</span></li>
+    </ul>
+  </section>
+
+  <section class="ch" data-ch="1">
+    <div class="copy reveal">
+      <p class="eyebrow"><b>01</b>Die feine Seite</p>
+      <h2 class="title">Für alles<br><span>Zarte.</span></h2>
+      <p class="lede">Tomaten, Obst und weiche Brötchen. Der feine Wellenschliff gleitet durch die Haut, ohne zu quetschen.</p>
+    </div>
+  </section>
+
+  <section class="ch" data-ch="2">
+    <div class="copy reveal">
+      <p class="eyebrow"><b>02</b>Die grobe Seite</p>
+      <h2 class="title">Für alles<br><span>Krosse.</span></h2>
+      <p class="lede">Einmal umdrehen: Der grobe Wellenschliff packt Kruste, Baguette, Pizza und Steak.</p>
+    </div>
+  </section>
+
+  <section class="ch ch--set" id="set" data-ch="3">
+    <div class="copy reveal">
+      <p class="eyebrow"><b>03</b>Das Set</p>
+      <h2 class="title">Sechs Messer.<br><span>Ein ganzer Tisch.</span></h2>
+      <p class="lede">Sechs ANIRIUS® 2-in-1 in der Geschenkbox. Edelstahl, spülmaschinenfest.</p>
+      <div class="buy">
+        <p class="price">39,95 € <small>inkl. MwSt.</small></p>
+        <a class="btn" href="index.html#kaufen">In den Warenkorb</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <span>© ANIRIUS®</span>
+  <span class="credit">Fotos: Paul Lichtblau, Metin Ozer, Volodymyr Lymariev, M F · Unsplash</span>
+</footer>
+<script src="welten.js"></script>
+<style>
+#ak-back{position:fixed;bottom:16px;left:16px;z-index:2147483647;display:flex;align-items:center;gap:6px;padding:9px 14px 9px 11px;border-radius:999px;background:rgba(20,20,20,.82);color:#fff;font:500 14px/1 system-ui,sans-serif;text-decoration:none;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 2px 10px rgba(0,0,0,.18);transition:transform .25s ease,opacity .25s ease}
+@media (max-width:720px){#ak-back{padding:0;width:40px;height:40px;justify-content:center;top:auto;bottom:max(16px,env(safe-area-inset-bottom));left:12px}#ak-back span{display:none}}
+#ak-back.ak-hide{transform:translateY(80px);opacity:0;pointer-events:none}
+</style><a id="ak-back" href="../" aria-label="Zurück zur Übersicht"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg><span>Zurück</span></a><script>(function(){var b=document.getElementById('ak-back'),y=scrollY;addEventListener('scroll',function(){var n=scrollY,d=n-y;if(n<120||d<-6)b.classList.remove('ak-hide');else if(d>6)b.classList.add('ak-hide');if(Math.abs(d)>6||n<120)y=n},{passive:true})})();</script></body>
+</html>
