@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>ANIRIUS® 2-in-1 · Der Deal</title>
+<meta name="description" content="Die Löwen hatten ihre Runde, jetzt kommt deine: Hör dir den Pitch zum ANIRIUS® 2-in-1 Besteckmesser an und entscheide selbst. 6er-Set in Geschenkbox, 39,95 €.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="deal.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="nav__logo" href="#top" aria-label="ANIRIUS"><img src="img/anirius-logo.svg" alt="ANIRIUS"></a>
+  <p class="nav__tv">Bekannt aus „Die Höhle der Löwen“ · VOX</p>
+  <a class="nav__cart" href="#top" aria-label="Warenkorb"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg><span data-count>0</span></a>
+</header>
+
+<main id="top">
+
+  <section class="pitch" aria-label="Der Pitch">
+   <div class="pitch__pin">
+    <div class="pitch__bar">
+      <div class="segs" role="list">
+        <button class="seg is-on" type="button" aria-label="Start" aria-current="step"></button>
+        <button class="seg" type="button" aria-label="Pitch 1"></button>
+        <button class="seg" type="button" aria-label="Pitch 2"></button>
+        <button class="seg" type="button" aria-label="Pitch 3"></button>
+        <button class="seg" type="button" aria-label="Pitch 4"></button>
+        <button class="seg" type="button" aria-label="Pitch 5"></button>
+        <button class="seg" type="button" aria-label="Dein Deal"></button>
+      </div>
+      <p class="pitch__step" data-step-label aria-live="polite">Der Pitch</p>
+    </div>
+
+    <div class="pitch__grid">
+      <!-- Visuals (right on desktop, top on phones) -->
+      <div class="pitch__vis">
+        <div class="vis vis--knife" data-vis="knife">
+          <canvas aria-hidden="true"
+            data-model="../assets/anirius-knife.glb"
+            data-hdr="../assets/anirius-studio.hdr"></canvas>
+          <div class="lab is-up" data-edge="fine"><span>Feiner Wellenschliff<b>Tomaten · Obst · Brötchen</b></span></div>
+          <div class="lab" data-edge="coarse"><span>Grober Wellenschliff<b>Kruste · Pizza · Steak</b></span></div>
+        </div>
+        <div class="vis vis--tv" data-vis="tv">
+          <a class="tv" href="https://anirius.de/" target="_blank" rel="noopener" aria-label="Den Original-Ausschnitt auf anirius.de ansehen">
+            <span class="tv__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            <span class="tv__label"><b>Ausschnitt ansehen</b>Der Original-Ausschnitt aus der Sendung</span>
+            <span class="tv__tag">VOX</span>
+          </a>
+        </div>
+        <div class="vis vis--count" data-vis="count" aria-hidden="true">
+          <p class="count"><span class="count__from">5</span><span class="count__arrow">→</span><span class="count__to">1</span></p>
+          <ul class="strike"><li>Brötchenmesser</li><li>Tomatenmesser</li><li>Pizzamesser</li><li>Steakmesser</li><li>Streichmesser</li></ul>
+          <p class="small">Ein ANIRIUS® für alles, vom Frühstück bis zum Steak.</p>
+        </div>
+        <div class="vis vis--safe" data-vis="safe" aria-hidden="true">
+          <div class="safe-grid">
+            <div class="safe"><p class="big">0 €</p><p class="small">Versand in ganz Deutschland</p></div>
+            <div class="safe"><p class="big">420</p><p class="small">Edelstahl, lebensmittelecht</p></div>
+            <div class="safe"><p class="big">1–3 Tage</p><p class="small">Lieferung mit DHL</p></div>
+            <div class="safe"><p class="big">30 Tage</p><p class="small">Rückgaberecht</p></div>
+          </div>
+        </div>
+        <div class="vis vis--stars" data-vis="stars" aria-hidden="true">
+          <p class="big">4,4</p>
+          <p class="stars">★★★★★</p>
+          <p class="small">von 5 · 84 Bewertungen</p>
+        </div>
+        <div class="vis vis--hero is-on" data-vis="hero"><canvas aria-hidden="true"></canvas></div>
+        <div class="vis vis--set set__view" data-vis="set"><canvas class="set__stage" aria-hidden="true"></canvas></div>
+      </div>
+
+      <!-- Screens -->
+      <div class="pitch__text">
+        <div class="scr is-on" data-vis="hero">
+          <p class="eyebrow">VOX · Die Höhle der Löwen · Staffel 19</p>
+          <h1 class="scr__h" tabindex="-1">Die Löwen hatten ihre Runde. <span class="h-accent">Jetzt kommt deine.</span></h1>
+          <p class="scr__p">Fünf Pitches, ein Messer, eine Entscheidung: deine.</p>
+        </div>
+
+        <div class="scr" data-vis="count">
+          <p class="eyebrow">Pitch 1 · Das Problem</p>
+          <h2 class="scr__h" tabindex="-1">Schluss mit dem<br>Messer-Berg.</h2>
+          <p class="scr__p">Brötchen, Tomate, Pizza, Steak, Butter: Statt fünf verschiedener Messer liegt eins auf dem Tisch.</p>
+        </div>
+
+        <div class="scr" data-vis="knife">
+          <p class="eyebrow">Pitch 2 · Die Lösung</p>
+          <h2 class="scr__h" tabindex="-1">Zwei Schliffe.<br>Eine Klinge.</h2>
+          <p class="scr__p">Feiner Wellenschliff oben, grober unten. Ein Dreh, und du hast das richtige Messer in der Hand.</p>
+          <button class="btn btn--small" type="button" data-turn>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.95 11a8 8 0 1 0-.5 4M20 4v7h-7"/></svg>Messer umdrehen
+          </button>
+        </div>
+
+        <div class="scr" data-vis="tv">
+          <p class="eyebrow">Pitch 3 · Live getestet</p>
+          <h2 class="scr__h" tabindex="-1">Die Löwen haben<br>es getestet.</h2>
+          <p class="scr__p">Der Schneide-Test aus der Sendung: ein Messer, zwei Schliffe, live vor den Löwen.</p>
+        </div>
+
+        <div class="scr" data-vis="stars">
+          <p class="eyebrow">Pitch 4 · Die Kunden</p>
+          <h2 class="scr__h" tabindex="-1">Nicht nur<br>die Löwen.</h2>
+          <p class="scr__p">84 Bewertungen, im Schnitt 4,4 von 5 Sternen.</p>
+        </div>
+
+        <div class="scr" data-vis="safe">
+          <p class="eyebrow">Pitch 5 · Null Risiko</p>
+          <h2 class="scr__h" tabindex="-1">Du kannst<br>nichts verlieren.</h2>
+          <p class="scr__p">Bezahlen mit PayPal, Klarna oder Karte. Spülmaschinenfest. Und wenn es dir nicht gefällt, schickst du es einfach zurück.</p>
+        </div>
+
+        <div class="scr scr--deal" data-vis="set">
+          <p class="eyebrow" data-deal-eyebrow>Dein Deal</p>
+          <h2 class="scr__h" tabindex="-1">Schlag ein.</h2>
+          <form data-buy>
+            <label class="opt">
+              <input type="radio" name="set" value="1">
+              <span class="opt__in"><span class="opt__name"><b>1 Set</b><small>6 Messer · edle Geschenkbox</small></span><span class="opt__price"><b>39,95 €</b></span></span>
+            </label>
+            <label class="opt">
+              <input type="radio" name="set" value="2" checked>
+              <span class="opt__in"><span class="opt__name"><b>2 Sets <em class="tag">Du sparst 15 €</em></b><small>12 Messer · perfekt zum Verschenken</small></span><span class="opt__price"><s>79,90 €</s><b>64,90 €</b></span></span>
+            </label>
+            <div class="acts">
+              <button class="btn btn--yes btn--deal" type="submit">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 17l-2 2a2.1 2.1 0 0 1-3-3l4.5-4.5a3 3 0 0 1 4.2 0l.8.8"/><path d="M13 7l2-2a2.1 2.1 0 0 1 3 3l-4.5 4.5a3 3 0 0 1-4.2 0l-.8-.8"/></svg>
+                Deal! · <span data-price>39,95 €</span>
+              </button>
+            </div>
+          </form>
+          <p class="fine">Kostenloser Versand in DE · 30 Tage Rückgaberecht · PayPal, Klarna oder Karte</p>
+        </div>
+      </div>
+    </div>
+    <p class="scroll-hint" aria-hidden="true">Scrollen für den Pitch <span>↓</span></p>
+   </div>
+  </section>
+
+  <section class="faq" id="fragen">
+    <h2>Noch Fragen?</h2>
+    <details><summary>Wie funktioniert das Messer?</summary><p>Das Messer hat eine feine und eine grobe Seite: feiner Wellenschliff für saubere, glatte Schnitte, grober Wellenschliff für Kruste und Fleisch. Je nach Lebensmittel drehst du das Messer einfach um.</p></details>
+    <details><summary>Wofür kann ich es benutzen?</summary><p>Vom Frühstück bis zum Abendessen: Brötchen, Baguette, Obst, Gemüse, Pizza, Steak und zum Streichen von Butter oder Aufstrich – ein Messer statt fünf.</p></details>
+    <details><summary>Was ist im Set enthalten?</summary><p>6 ANIRIUS® 2-in-1 Besteckmesser aus Edelstahl 420, ca. 20 cm lang, in einer eleganten Geschenkbox.</p></details>
+    <details><summary>Ist das Messer spülmaschinenfest?</summary><p>Ja, ANIRIUS® ist spülmaschinenfest.</p></details>
+    <details><summary>Wie schnell wird geliefert?</summary><p>Bestellungen verlassen in der Regel innerhalb von 1–2 Werktagen unser Lager. DHL stellt dann meist in 1–3 Werktagen zu.</p></details>
+    <details><summary>Was kostet der Versand?</summary><p>Innerhalb Deutschlands ist der Versand immer kostenlos. In andere EU-Länder versenden wir für 13,99 €.</p></details>
+    <details><summary>Kann ich das Set zurückgeben?</summary><p>Ja, du hast 30 Tage Rückgaberecht.</p></details>
+    <details><summary>Wie kann ich bezahlen?</summary><p>Per PayPal, Klarna oder Karte.</p></details>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <img src="img/anirius-logo.svg" alt="ANIRIUS">
+  <nav aria-label="Rechtliches"><a href="#">AGB</a><a href="#">Datenschutz</a><a href="#">Impressum</a><a href="#">Widerrufsbelehrung</a><a href="#">Kontakt</a></nav>
+  <p>© ANIRIUS®</p>
+</footer>
+
+<div class="toast" role="status" aria-live="polite"></div>
+
+<script src="deal.js"></script>
+<style>
+#ak-back{position:fixed;bottom:16px;left:16px;z-index:2147483647;display:flex;align-items:center;gap:6px;padding:9px 14px 9px 11px;border-radius:999px;background:rgba(20,20,20,.82);color:#fff;font:500 14px/1 system-ui,sans-serif;text-decoration:none;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 2px 10px rgba(0,0,0,.18);transition:transform .25s ease,opacity .25s ease}
+@media (max-width:720px){#ak-back{padding:0;width:40px;height:40px;justify-content:center;top:auto;bottom:max(16px,env(safe-area-inset-bottom));left:12px}#ak-back span{display:none}}
+#ak-back.ak-hide{transform:translateY(80px);opacity:0;pointer-events:none}
+</style><a id="ak-back" href="../" aria-label="Zurück zur Übersicht"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg><span>Zurück</span></a><script>(function(){var b=document.getElementById('ak-back'),y=scrollY;addEventListener('scroll',function(){var n=scrollY,d=n-y;if(n<120||d<-6)b.classList.remove('ak-hide');else if(d>6)b.classList.add('ak-hide');if(Math.abs(d)>6||n<120)y=n},{passive:true})})();</script></body>
+</html>
