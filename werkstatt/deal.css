@@ -169,7 +169,11 @@ h1.scr__h { font-size: clamp(42px, 4.15vw, 70px); color: var(--mute); }
   .safe .big { font-size: clamp(28px, 8.5vw, 40px); }
   .safe .small { font-size: 12px; margin-top: 4px; }
   .vis--stars .big { font-size: clamp(110px, 32vw, 150px); }
-  .scroll-hint { bottom: 10px; }
+  /* Pitch bar sits at the bottom of the screen on phones (thumb area), the scroll hint just above it. */
+  .pitch__pin { padding-bottom: max(14px, env(safe-area-inset-bottom)); }
+  .pitch__bar { order: 2; margin-top: 12px; }
+  .pitch__grid { order: 1; }
+  .scroll-hint { bottom: calc(max(14px, env(safe-area-inset-bottom)) + 30px); }
   /* Start screen on phones = a real hero: headline first, then a big product picture filling the rest. */
   .pitch.is-start .pitch__grid { grid-template-areas: 'text' 'vis'; margin-top: clamp(20px, 6svh, 48px); gap: 0; }
   .pitch.is-start .pitch__vis { height: auto; flex: 1; min-height: 300px; align-self: stretch; }
