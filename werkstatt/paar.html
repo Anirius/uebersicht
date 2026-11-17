@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>ANIRIUS® 2-in-1 · Eine behalten, eine verschenken</title>
+<meta name="description" content="Eine Box für deinen Tisch, eine zum Verschenken: das ANIRIUS® 2-in-1 Besteckmesser im 6er-Set in Geschenkbox. 2 Boxen für 64,90 €.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Manrope:wght@400;500;700&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="paar.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="nav__logo" href="#top" aria-label="ANIRIUS"><img src="img/anirius-logo.svg" alt="ANIRIUS"></a>
+  <p class="nav__tv"><span>Bekannt aus </span>„Die Höhle der Löwen“ · VOX</p>
+  <a class="nav__cart" href="#kaufen" aria-label="Warenkorb"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg><span data-count>0</span></a>
+</header>
+
+<main id="top">
+
+  <section class="scene" data-step="0" aria-label="Eine behalten, eine verschenken">
+    <div class="scene__pin">
+      <div class="half half--keep">
+        <p class="label">Behalten</p>
+        <div class="slides">
+          <div class="slide is-on" data-on="0 5">
+            <p class="eyebrow">Box 1</p>
+            <h1>Eine<br>behalten.</h1>
+            <p class="lead">Sechs Besteckmesser mit feinem und grobem Wellenschliff an einer Klinge. Für deinen Tisch.</p>
+          </div>
+          <div class="slide" data-on="1">
+            <p class="eyebrow">Für dich · oben</p>
+            <h2 class="big">Fein.</h2>
+            <p class="lead">Der feine Wellenschliff für Tomaten, Obst und weiche Brötchen. Glatt, ohne zu zerdrücken.</p>
+          </div>
+          <div class="slide" data-on="2">
+            <p class="eyebrow">Für dich · unten</p>
+            <h2 class="big">Grob.</h2>
+            <p class="lead">Einmal umdrehen: Der grobe Wellenschliff packt Kruste, Pizza und Steak.</p>
+          </div>
+        </div>
+        <div class="views">
+          <div class="view" data-knife="whole"><canvas aria-hidden="true"
+            data-model="../assets/anirius-knife.glb"
+            data-hdr="../assets/anirius-studio.hdr"></canvas></div>
+        </div>
+      </div>
+      <div class="half half--give">
+        <p class="label">Verschenken</p>
+        <div class="slides">
+          <div class="slide is-on" data-on="0 5">
+            <p class="eyebrow">Box 2</p>
+            <p class="h1">Eine<br>verschenken.</p>
+            <p class="lead">Edel verpackt. Bereit zum Verschenken, ohne extra Geschenkpapier.</p>
+          </div>
+          <div class="slide" data-on="3">
+            <p class="eyebrow">Für jemand anderen</p>
+            <h2 class="big">Edel verpackt.</h2>
+            <p class="lead">Sechs Messer, sicher eingebettet. Bereit zum Verschenken, ohne extra Geschenkpapier.</p>
+          </div>
+          <div class="slide" data-on="4">
+            <p class="eyebrow">Auf jeder Klinge</p>
+            <h2 class="big">Das Original.</h2>
+            <p class="lead">Per Laser graviert: Am ANIRIUS® Zeichen erkennst du das echte 2-in-1 Messer.</p>
+          </div>
+        </div>
+        <div class="views">
+          <div class="view view--closed" data-box="closed"><canvas aria-hidden="true"></canvas></div>
+        </div>
+      </div>
+      <a class="pill" href="#kaufen" data-pick="2">2 Boxen · 64,90 € <em>Spare 15 €</em></a>
+      <p class="hint" aria-hidden="true">Scrollen ↓</p>
+    </div>
+  </section>
+
+  <section class="proof">
+    <p class="eyebrow">VOX · Die Höhle der Löwen · Staffel 19</p>
+    <h2>Die Löwen haben’s <i>getestet.</i></h2>
+    <p class="proof__stars"><span aria-hidden="true">★★★★★</span> 4,4 von 5 · 84 Bewertungen</p>
+    <a class="watch" href="https://anirius.de/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Original-Ausschnitt ansehen</a>
+    <p class="press">Bekannt aus VOX · RTL+ · Schwäbische Zeitung · deutsche-startups.de · Leadersnet</p>
+  </section>
+
+  <section class="buy" id="kaufen">
+    <div class="view view--open" data-box="buy"><canvas aria-hidden="true"></canvas></div>
+    <div class="buy__panel">
+      <p class="eyebrow">Alle sechs · in Geschenkbox</p>
+      <h2>Wähle dein Set.</h2>
+      <form data-buy>
+        <label class="opt">
+          <input type="radio" name="set" value="1">
+          <span class="opt__in"><span class="opt__name"><b>1 Box</b><small>Nur behalten · 6 Messer, Edelstahl 420</small></span><span class="opt__price"><b>39,95 €</b></span></span>
+        </label>
+        <label class="opt">
+          <input type="radio" name="set" value="2" checked>
+          <span class="opt__in"><span class="opt__name"><b>2 Boxen <em class="tag">Spare 15 €</em></b><small>Eine behalten, eine verschenken · 12 Messer</small></span><span class="opt__price"><s>79,90 €</s><b>64,90 €</b></span></span>
+        </label>
+        <button class="btn" type="submit">In den Warenkorb · <span data-price>64,90 €</span></button>
+      </form>
+      <p class="fine">Versand kostenlos in DE · DHL in 1–3 Werktagen · 30 Tage Rückgaberecht · PayPal, Klarna oder Karte</p>
+    </div>
+  </section>
+
+  <section class="engrave" id="gravur">
+    <div class="engrave__text">
+      <p class="eyebrow">Persönliche Laser-Gravur</p>
+      <h2>Dein Name.<br>Für immer in Stahl.</h2>
+      <p class="say">Ein Name, ein Datum oder eine kurze Widmung, per Laser in den Griff graviert. Bis zu 16 Zeichen, auf allen sechs Messern.</p>
+      <label class="field">
+        <span>Text für die Gravur</span>
+        <input type="text" maxlength="16" placeholder="Dein Name" data-engrave autocomplete="off">
+      </label>
+    </div>
+    <div class="view view--blade" data-knife="handle"><canvas aria-hidden="true"></canvas></div>
+  </section>
+
+  <section class="faq">
+    <h2>Häufige Fragen.</h2>
+    <details><summary>Wie funktioniert das Messer?</summary><p>Das Messer hat eine feine und eine grobe Seite: feiner Wellenschliff für saubere, glatte Schnitte, grober Wellenschliff für Kruste und Fleisch. Je nach Lebensmittel drehst du das Messer einfach um.</p></details>
+    <details><summary>Was ist im Set enthalten?</summary><p>6 ANIRIUS® 2-in-1 Besteckmesser aus Edelstahl 420, ca. 20 cm lang, in einer eleganten Geschenkbox.</p></details>
+    <details><summary>Ist das Messer spülmaschinenfest?</summary><p>Ja, ANIRIUS® ist spülmaschinenfest.</p></details>
+    <details><summary>Wie schnell wird geliefert?</summary><p>Bestellungen verlassen in der Regel innerhalb von 1–2 Werktagen unser Lager. DHL stellt dann meist in 1–3 Werktagen zu.</p></details>
+    <details><summary>Was kostet der Versand?</summary><p>Innerhalb Deutschlands ist der Versand immer kostenlos. In andere EU-Länder versenden wir für 13,99 €.</p></details>
+    <details><summary>Kann ich das Set zurückgeben?</summary><p>Ja, du hast 30 Tage Rückgaberecht.</p></details>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <img src="img/anirius-logo.svg" alt="ANIRIUS">
+  <nav aria-label="Rechtliches"><a href="#">AGB</a><a href="#">Datenschutz</a><a href="#">Impressum</a><a href="#">Widerruf</a><a href="#">Kontakt</a></nav>
+  <p>© ANIRIUS®</p>
+</footer>
+
+<div class="toast" role="status" aria-live="polite"></div>
+
+<script src="paar.js"></script>
+</body>
+</html>
