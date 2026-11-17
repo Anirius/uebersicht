@@ -124,7 +124,7 @@ h2.big { font-size: clamp(56px, 8vw, 128px); line-height: .95; letter-spacing: -
    beside the text and almost full height when the rose half is wide. */
 @media (min-width: 761px) {
   .half--give .slides { position: relative; z-index: 2; }
-  .half--give .views { position: absolute; margin: 0; inset: 44% 0 0 0; transition: inset .8s cubic-bezier(.2, .7, .2, 1); }
+  .half--give .views { position: absolute; margin: 0; inset: 47% 0 2% 0; transition: inset .8s cubic-bezier(.2, .7, .2, 1); }
   .half--give.is-narrow .views { inset: 18% 0 0 0; }
   .scene[data-step="3"] .half--give .views, .scene[data-step="4"] .half--give .views { inset: 5% 0 5% 44%; }
   .half--give h2.big { font-size: clamp(48px, 6vw, 104px); }
