@@ -1,0 +1,129 @@
+/* Ins Licht: a black room, one band of light reveals the knife; then the lights come on (white) for the set. */
+:root {
+  --night: #050505;
+  --ink: #0d0d0d;
+  --paper: #ffffff;
+  --text: #ececec;
+  --dim: #8d8d8d;
+  --mute: #555555;
+  --line: #e6e6e6;
+  --gold: #a8842f;
+  --gold-hi: #d6b56a;
+  --sans: 'Manrope', 'Helvetica Neue', Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; overflow-x: clip; }
+html { scroll-behavior: smooth; background: var(--night); }
+body { background: var(--night); color: var(--text); font: 400 16px/1.6 var(--sans); -webkit-font-smoothing: antialiased; }
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+
+/* Nav: black, logo turned white */
+.nav {
+  position: sticky; top: 0; z-index: 20; height: 60px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 clamp(16px, 4vw, 48px);
+  background: var(--night); border-bottom: 1px solid #161616;
+}
+.nav__logo img { height: 18px; width: auto; filter: invert(1); }
+.nav__cart { font-size: 14px; text-decoration: none; color: var(--text); }
+
+/* ---------- Reveal ---------- */
+.reveal { height: 560vh; position: relative; }
+.reveal__pin { position: sticky; top: 60px; height: calc(100svh - 60px); overflow: hidden; background: var(--night); }
+.reveal__stage { position: absolute; inset: 0; }
+.reveal__stage canvas { display: block; width: 100%; height: 100%; }
+
+.cap {
+  position: absolute; left: clamp(20px, 6vw, 96px); bottom: clamp(36px, 10vh, 110px); max-width: 520px;
+  opacity: 0; transform: translateY(18px); pointer-events: none;
+  transition: opacity 0.7s ease, transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.cap.is-on { opacity: 1; transform: none; pointer-events: auto; }
+.cap__k { margin: 0 0 10px; font-size: 13px; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold-hi); }
+.cap__n { margin: 0 0 8px; font-size: 13px; font-weight: 600; letter-spacing: 0.2em; color: var(--gold-hi); }
+.cap__h { margin: 0; font-weight: 500; font-size: clamp(40px, 5.6vw, 92px); line-height: 1; letter-spacing: -0.025em; color: #f7f7f7; }
+.cap__p { margin: 16px 0 0; font-size: clamp(15px, 1.25vw, 18px); color: #b9b9b9; max-width: 440px; }
+.cap--start .cap__h { font-size: clamp(52px, 8vw, 132px); }
+.cap--end .btn-gold { margin-top: 26px; }
+
+.meter { position: absolute; left: clamp(20px, 6vw, 96px); right: clamp(20px, 6vw, 96px); bottom: 20px; height: 1px; background: #1d1d1d; }
+.meter span { position: absolute; inset: 0; background: var(--gold-hi); transform-origin: 0 50%; transform: scaleX(0); }
+
+/* Gold button */
+.btn-gold {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.35em;
+  height: 52px; padding: 0 30px; border: 0; border-radius: 999px; cursor: pointer;
+  background: var(--gold-hi); color: var(--ink); text-decoration: none;
+  font: 700 13px/1 var(--sans); letter-spacing: 0.14em; text-transform: uppercase;
+  transition: background 0.2s, transform 0.2s;
+}
+.btn-gold:hover { background: #e2c47e; }
+.btn-gold:active { transform: scale(0.98); }
+.btn-gold--wide { width: 100%; height: 56px; }
+
+/* ---------- Lights on: the set ---------- */
+.set {
+  background: var(--paper); color: var(--ink);
+  display: grid; grid-template-columns: 1.15fr 1fr; align-items: center; gap: clamp(24px, 5vw, 80px);
+  padding: clamp(64px, 9vw, 128px) clamp(20px, 6vw, 96px);
+}
+.set__view { position: relative; aspect-ratio: 4 / 3; }
+.set__view canvas { position: absolute; inset: 0; display: block; width: 100%; height: 100%; }
+.set__k { margin: 0 0 12px; font-size: 13px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); }
+.set__h { margin: 0; font-weight: 500; font-size: clamp(36px, 4.4vw, 68px); line-height: 1.02; letter-spacing: -0.025em; }
+.set__h em { font-style: normal; color: #8a8a8a; }
+.opts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 28px 0 12px; }
+.opt { position: relative; cursor: pointer; }
+.opt input { position: absolute; opacity: 0; }
+.opt span { display: block; padding: 14px 16px; border: 1px solid var(--line); border-radius: 8px; transition: border-color 0.2s; }
+.opt b { display: block; font-weight: 600; }
+.opt small { font-size: 13px; color: var(--mute); }
+.opt input:checked + span { border-color: var(--ink); }
+.opt input:focus-visible + span { outline: 2px solid var(--gold); outline-offset: 2px; }
+.set .btn-gold { background: var(--ink); color: #fff; }
+.set .btn-gold:hover { background: #262626; }
+.fine { margin: 14px 0 0; font-size: 13px; color: var(--mute); }
+.tv { margin: 22px 0 0; padding-top: 18px; border-top: 1px solid var(--line); font-size: 14px; color: var(--mute); }
+.tv b { color: var(--gold); font-weight: 600; }
+
+/* ---------- FAQ + footer ---------- */
+.faq { margin-top: -1px; background: var(--paper); color: var(--ink); padding: clamp(40px, 6vw, 80px) max(20px, calc(50% - 390px)) clamp(64px, 9vw, 120px); }
+.faq__h { margin: 0 0 24px; font-weight: 500; letter-spacing: -0.02em; font-size: clamp(30px, 3.4vw, 46px); }
+.faq details { border-top: 1px solid var(--line); }
+.faq details:last-child { border-bottom: 1px solid var(--line); }
+.faq summary { list-style: none; cursor: pointer; padding: 18px 30px 18px 0; position: relative; font-weight: 600; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: '+'; position: absolute; right: 0; top: 13px; font-size: 24px; font-weight: 300; color: var(--gold); }
+.faq details[open] summary::after { content: '–'; }
+.faq p { margin: 0 0 18px; color: var(--mute); }
+.foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 30px clamp(16px, 4vw, 48px); background: var(--night); color: var(--dim); font-size: 13px; }
+.foot img { height: 15px; width: auto; filter: invert(1); }
+.foot nav { display: flex; flex-wrap: wrap; gap: 18px; }
+.foot a { text-decoration: none; }
+
+.toast {
+  position: fixed; left: 50%; bottom: 24px; z-index: 30; transform: translate(-50%, 20px);
+  padding: 12px 20px; border-radius: 999px; background: var(--ink); color: #fff; font-size: 14px;
+  opacity: 0; pointer-events: none; transition: opacity 0.3s, transform 0.3s;
+}
+.toast.is-on { opacity: 1; transform: translate(-50%, 0); }
+
+@media (max-width: 760px) {
+  /* The knife runs top to bottom on phones: a soft fade keeps the captions readable over the steel. */
+  .reveal__pin::after {
+    content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 50%; z-index: 1; pointer-events: none;
+    background: linear-gradient(to bottom, rgba(5, 5, 5, 0), rgba(5, 5, 5, 0.78) 55%, rgba(5, 5, 5, 0.92));
+  }
+  .cap, .meter { z-index: 2; }
+  .cap { left: 20px; right: 20px; bottom: 44px; }
+  .cap__h { font-size: clamp(36px, 10.5vw, 52px); }
+  .cap--start .cap__h { font-size: clamp(48px, 15vw, 72px); }
+  .cap__p { font-size: 15px; margin-top: 10px; }
+  .meter { left: 20px; right: 20px; }
+  .set { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .cap { transition: opacity 0.2s; transform: none; }
+}
