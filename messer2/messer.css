@@ -1,0 +1,116 @@
+/* "Das Messer ist die Seite", second style: a laid table. The knife lies on white linen in soft daylight
+   (the cloth is drawn by the script, under everything); type like a restaurant menu; buying on a white card. */
+:root {
+  --cloth: #f3efe7; /* shown only until the cloth is drawn */
+  --ink: #2b2723;
+  --dim: #6c645a;
+  --line: #ddd5c8;
+  --gold: #a07d35;
+  --serif: "Cormorant Garamond", "Times New Roman", serif;
+  --sans: "Inter", "Segoe UI", system-ui, sans-serif;
+  --pad: clamp(16px, 4.6vw, 48px);
+  --L: 190vh; /* knife length on the page, set by the script */
+  --blade: calc(var(--L) * 0.066);
+  --grip: calc(var(--L) * 0.034);
+  --bar: 70px;
+  color-scheme: light only;
+}
+* { box-sizing: border-box; }
+html { background: var(--cloth); }
+body { margin: 0; background-color: var(--cloth); background-size: var(--tile, 500px); color: var(--ink); font: 400 16px/1.5 var(--sans); -webkit-font-smoothing: antialiased; overflow-x: hidden; padding-bottom: var(--bar); }
+a { color: inherit; }
+em { font-style: italic; }
+
+/* the cloth and the knife; daylight falls in from the top left */
+#gl { position: absolute; z-index: 0; left: 50%; transform: translateX(-50%); display: block; pointer-events: none; }
+.note, .dim { z-index: 1; }
+body::before { content: ""; position: fixed; z-index: 1; inset: 0; pointer-events: none; background: radial-gradient(120% 80% at 10% 0%, rgba(255, 255, 255, .55), rgba(255, 255, 255, 0) 60%), linear-gradient(125deg, rgba(90, 70, 40, 0) 50%, rgba(90, 70, 40, .09)); }
+main, .top, .foot { position: relative; z-index: 2; }
+
+.top { display: flex; justify-content: center; padding: 20px var(--pad) 0; }
+.brand { color: var(--ink); line-height: 0; }
+.brand__logo { width: 116px; height: auto; }
+
+.kicker { margin: 0 0 12px; font: 500 10.5px/1.3 var(--sans); letter-spacing: .26em; text-transform: uppercase; color: var(--dim); }
+h1, .hl { margin: 0; font: 500 clamp(44px, 12.6vw, 86px)/.96 var(--serif); letter-spacing: -.012em; }
+.hl { font-size: clamp(38px, 10.6vw, 70px); }
+.rule { width: 44px; height: 1px; margin: 18px auto 14px; border: 0; background: var(--ink); opacity: .5; }
+
+/* hero: like the head of a menu */
+.hero { padding: 30px var(--pad) 0; text-align: center; }
+.proof, .tv { margin: 0; font-size: 13.5px; color: var(--dim); }
+.proof span { color: var(--gold); letter-spacing: .12em; }
+.hero .tv--hero { margin: 4px 0 0; font: italic 500 18px/1.3 var(--serif); color: var(--ink); }
+
+/* the knife's length of page */
+.knife { position: relative; padding: 30px 0 0; }
+.knife__len { position: relative; height: var(--L); }
+.note { position: absolute; top: calc(var(--at) * var(--L)); width: calc(50% - var(--blade) - 10px); max-width: 250px; transform: translateY(-50%); }
+.note--h { width: calc(50% - var(--grip) - 10px); }
+.note--l { right: calc(50% + var(--blade)); text-align: right; padding-right: 12px; }
+.note--r { left: calc(50% + var(--blade)); padding-left: 12px; }
+.note--l.note--h { right: calc(50% + var(--grip)); }
+.note--r.note--h { left: calc(50% + var(--grip)); }
+.note h2 { margin: 0 0 3px; font: italic 500 clamp(27px, 7.6vw, 40px)/1 var(--serif); }
+.note p { margin: 0; font-size: clamp(12.5px, 3.4vw, 15px); line-height: 1.38; color: var(--dim); }
+
+.engrave { padding: 26px var(--pad) 0; text-align: center; }
+.engrave label { display: block; font: 500 10.5px/1 var(--sans); letter-spacing: .26em; text-transform: uppercase; color: var(--dim); }
+#name { display: block; width: min(100%, 300px); margin: 12px auto 0; padding: 14px; font: 500 20px/1.2 var(--serif); color: var(--ink); background: #fffdf9; border: 1px solid #cfc6b6; border-radius: 2px; text-align: center; outline: none; box-shadow: 0 6px 18px -10px rgba(60, 45, 20, .5); }
+#name:focus { border-color: var(--ink); }
+
+/* the set */
+.box { padding: 96px 0 0; text-align: center; }
+.box .kicker, .box .hl { padding: 0 var(--pad); }
+.box__frame { width: min(100%, 860px); aspect-ratio: 1 / .62; margin: clamp(32px, 7vw, 64px) auto 0; }
+
+/* a white card lying on the cloth */
+.card { width: min(100% - 2 * var(--pad), 600px); margin: 26px auto 0; padding: 26px clamp(18px, 5vw, 34px) 28px; background: #fffdf9; border-radius: 3px; box-shadow: 0 1px 0 rgba(255, 255, 255, .8) inset, 0 22px 40px -22px rgba(60, 45, 20, .45), 0 2px 6px rgba(60, 45, 20, .08); }
+.card > .kicker { text-align: center; margin-bottom: 18px; }
+.pick { display: grid; gap: 0; }
+.opt input { position: absolute; opacity: 0; }
+.opt__in { display: grid; grid-template-columns: 22px 1fr auto; column-gap: 12px; align-items: center; padding: 15px 0; border-top: 1px solid var(--line); cursor: pointer; }
+.opt__in::before { content: ""; grid-row: 1 / span 2; width: 18px; height: 18px; border-radius: 50%; border: 1px solid var(--ink); box-shadow: inset 0 0 0 4px #fffdf9; }
+.opt input:checked + .opt__in::before { background: var(--ink); }
+.opt__name { grid-column: 2; font: 500 27px/1 var(--serif); }
+.opt__sub { grid-column: 2; font-size: 13.5px; color: var(--dim); margin-top: 3px; }
+.opt__in b { grid-column: 3; grid-row: 1 / span 2; font: 500 25px/1 var(--serif); font-variant-numeric: lining-nums; }
+.opt input:focus-visible + .opt__in { outline: 2px solid var(--ink); outline-offset: 2px; }
+.btn { display: inline-block; border: 0; border-radius: 2px; background: var(--ink); color: #fffdf9; font: 500 12.5px/1 var(--sans); letter-spacing: .2em; text-transform: uppercase; text-decoration: none; padding: 17px 22px; cursor: pointer; white-space: nowrap; }
+.btn--wide { width: 100%; margin-top: 6px; padding: 20px 24px; }
+.pick .btn--wide { border-top: 0; }
+.trust { list-style: none; margin: 24px 0 0; padding: 18px 0 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; font-size: 13px; line-height: 1.4; color: var(--dim); text-align: center; }
+.trust b { display: block; margin-bottom: 4px; font: 500 10px/1 var(--sans); letter-spacing: .2em; text-transform: uppercase; color: var(--ink); }
+.buy .tv { margin-top: 20px; text-align: center; font: italic 500 18px/1.3 var(--serif); color: var(--ink); }
+
+.faq { margin-top: 40px; margin-bottom: 56px; }
+.faq .hl { margin-bottom: 14px; text-align: center; font-size: clamp(34px, 9vw, 54px); }
+details { border-top: 1px solid var(--line); }
+summary { list-style: none; cursor: pointer; padding: 16px 28px 16px 0; font: 500 21px/1.2 var(--serif); position: relative; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; position: absolute; right: 2px; top: 13px; font: 400 22px/1 var(--serif); }
+details[open] summary::after { content: "–"; }
+details p { margin: 0 0 18px; color: var(--dim); max-width: 36em; font-size: 15px; }
+
+.foot { padding: 22px var(--pad) 28px; display: flex; flex-wrap: wrap; gap: 10px 24px; justify-content: space-between; font-size: 13px; color: var(--dim); }
+.foot nav { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.foot a { text-decoration: none; }
+
+/* buy bar */
+.bar { position: fixed; z-index: 6; left: 0; right: 0; bottom: 0; height: var(--bar); padding: 0 var(--pad); padding-bottom: env(safe-area-inset-bottom); display: flex; align-items: center; justify-content: space-between; gap: 14px; background: #fffdf9; box-shadow: 0 -10px 30px -18px rgba(60, 45, 20, .5); }
+.bar__text b { display: block; font: 500 25px/1 var(--serif); font-variant-numeric: lining-nums; }
+.bar__text span { font-size: 12.5px; color: var(--dim); }
+.bar .btn { padding: 16px 18px; }
+
+.toast { position: fixed; z-index: 9; left: 50%; bottom: calc(var(--bar) + 14px); transform: translate(-50%, 16px); background: var(--ink); color: #fffdf9; padding: 13px 18px; border-radius: 2px; font-size: 14px; opacity: 0; pointer-events: none; transition: opacity .25s, transform .25s; max-width: calc(100% - 32px); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.toast.on { opacity: 1; transform: translate(-50%, 0); }
+
+/* overview back button: keep it above the buy bar */
+#ak-back { bottom: calc(var(--bar) + 14px + env(safe-area-inset-bottom)) !important; }
+
+@media (min-width: 900px) {
+  .note { max-width: 300px; }
+  .note--l { padding-right: 20px; }
+  .note--r { padding-left: 20px; }
+  .bar { justify-content: center; gap: 32px; }
+}
